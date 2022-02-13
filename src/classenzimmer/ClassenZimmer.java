@@ -37,6 +37,7 @@ public class ClassenZimmer extends Application {
         Scene scene = new Scene(root, 300, 250);
         
         primaryStage.setTitle("Hello World!");
+        System.out.println("helloooooooo");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
