@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #0A1D8E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #0A1D8E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LogInController">
    <children>
       <ImageView fx:id="image_logo" fitHeight="143.0" fitWidth="135.0" layoutX="455.0" layoutY="91.0" AnchorPane.leftAnchor="480.0" AnchorPane.rightAnchor="480.0" AnchorPane.topAnchor="100.0">
          <image>
@@ -28,6 +28,9 @@
          <font>
             <Font name="Bodoni MT" size="24.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <PasswordField fx:id="pwdText" layoutX="379.0" layoutY="388.0" prefHeight="50.0" prefWidth="400.0" promptText="Enter Password" style="-fx-background-radius: 25; -fx-border-radius: 25; -fx-background-color: transparent; -fx-border-color: white; -fx-opacity: .7; -fx-text-inner-color: white;" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0">
          <font>
@@ -38,11 +41,17 @@
          <font>
             <Font name="Bodoni MT" size="24.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button fx:id="forgotpassbtn" layoutX="494.0" layoutY="556.0" mnemonicParsing="false" onAction="#forgotPassAction" prefHeight="38.0" prefWidth="190.0" style="-fx-background-color: transparent;" text="Forgot Password?" textFill="WHITE" AnchorPane.leftAnchor="455.0" AnchorPane.rightAnchor="455.0">
          <font>
             <Font size="20.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
 </AnchorPane>
