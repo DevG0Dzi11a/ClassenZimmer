@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #0A1D8E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LogInController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #0A1D8E;" stylesheets="@../stylesheets/buttonstyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LogInController">
    <children>
       <ImageView fx:id="image_logo" fitHeight="143.0" fitWidth="135.0" layoutX="455.0" layoutY="91.0" AnchorPane.leftAnchor="532.5" AnchorPane.topAnchor="100.0">
          <image>
@@ -24,7 +24,7 @@
             <Font name="Times New Roman" size="20.0" />
          </font>
       </TextField>
-      <Button fx:id="loginbtn" layoutX="354.0" layoutY="466.0" mnemonicParsing="false" onAction="#logInAction" prefHeight="35.0" prefWidth="190.0" style="-fx-background-radius: 25;" stylesheets="file:/F:/Github/ClassenZimmer/src/stylesheets/buttonstyle.css" text="Log in" AnchorPane.leftAnchor="350.0">
+      <Button fx:id="loginbtn" layoutX="354.0" layoutY="466.0" mnemonicParsing="false" onAction="#logInAction" prefHeight="35.0" prefWidth="190.0" style="-fx-background-radius: 25;" text="Log in" AnchorPane.leftAnchor="350.0">
          <font>
             <Font name="Bodoni MT" size="24.0" />
          </font>
@@ -37,7 +37,7 @@
             <Font name="Times New Roman" size="20.0" />
          </font>
       </PasswordField>
-      <Button fx:id="regbtn" layoutX="556.0" layoutY="465.0" mnemonicParsing="false" onAction="#regAction" prefHeight="38.0" prefWidth="190.0" style="-fx-background-radius: 25;" stylesheets="file:/F:/Github/ClassenZimmer/src/stylesheets/buttonstyle.css" text="Register" AnchorPane.rightAnchor="350.0">
+      <Button fx:id="regbtn" layoutX="556.0" layoutY="465.0" mnemonicParsing="false" onAction="#regAction" prefHeight="38.0" prefWidth="190.0" style="-fx-background-radius: 25;" text="Register" AnchorPane.rightAnchor="350.0">
          <font>
             <Font name="Bodoni MT" size="24.0" />
          </font>
