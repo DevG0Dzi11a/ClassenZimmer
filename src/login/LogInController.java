@@ -25,7 +25,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -70,7 +69,6 @@ public class LogInController implements Initializable {
 
             if (rs.next()) {
                 System.out.println("Right uname pass");
-                //dispose();
                 Parent root = FXMLLoader.load(getClass().getResource("/homePage/homepage.fxml"));
                 Scene scene = new Scene(root);
                 Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
