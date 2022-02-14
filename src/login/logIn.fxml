@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #0A1D8E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LogInController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #0A1D8E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LogInController">
    <children>
-      <ImageView fx:id="image_logo" fitHeight="143.0" fitWidth="135.0" layoutX="455.0" layoutY="91.0" AnchorPane.leftAnchor="480.0" AnchorPane.rightAnchor="480.0" AnchorPane.topAnchor="100.0">
+      <ImageView fx:id="image_logo" fitHeight="143.0" fitWidth="135.0" layoutX="455.0" layoutY="91.0" AnchorPane.leftAnchor="532.5" AnchorPane.topAnchor="100.0">
          <image>
             <Image url="@../image/Logo.png" />
          </image>
@@ -45,7 +45,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="forgotpassbtn" layoutX="494.0" layoutY="556.0" mnemonicParsing="false" onAction="#forgotPassAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: transparent;" text="Forgot Password?" textFill="WHITE" AnchorPane.leftAnchor="440.0" AnchorPane.rightAnchor="440.0">
+      <Button fx:id="forgotpassbtn" layoutX="562.0" layoutY="556.0" mnemonicParsing="false" onAction="#forgotPassAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent;" stylesheets="@../stylesheets/buttonstyle.css" text="Forgot Password?" textFill="WHITE" AnchorPane.leftAnchor="500.0">
          <font>
             <Font size="20.0" />
          </font>
