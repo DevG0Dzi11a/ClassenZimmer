@@ -10,9 +10,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #0A1D8E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.Reg_optionsController">
    <children>
-      <Button fx:id="teacherbtn" alignment="CENTER_RIGHT" layoutX="197.0" layoutY="459.0" mnemonicParsing="false" onAction="#teacherAction" prefHeight="100.0" prefWidth="300.0" style="-fx-background-radius: 50; -fx-background-color: #9C19E0;" stylesheets="@cursor_reg_options.css" text="Teacher" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="300.0">
+      <Button fx:id="teacherbtn" alignment="CENTER_RIGHT" layoutX="197.0" layoutY="459.0" mnemonicParsing="false" onAction="#teacherAction" prefHeight="100.0" prefWidth="300.0" stylesheets="@../stylesheets/reg_options_style.css" text="Teacher" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="300.0">
          <font>
-            <Font name="Bodoni MT" size="49.0" />
+            <Font name="Bodoni MT" size="45.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -25,9 +25,9 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="studentbtn" alignment="CENTER_RIGHT" layoutX="566.0" layoutY="475.0" mnemonicParsing="false" onAction="#studentAction" prefHeight="100.0" prefWidth="300.0" style="-fx-background-radius: 50; -fx-background-color: #9C19E0;" stylesheets="@cursor_reg_options.css" text="Student" textFill="WHITE" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="300.0">
+      <Button fx:id="studentbtn" alignment="CENTER_RIGHT" layoutX="566.0" layoutY="475.0" mnemonicParsing="false" onAction="#studentAction" prefHeight="100.0" prefWidth="300.0" stylesheets="@../stylesheets/reg_options_style.css" text="Student" textFill="WHITE" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="300.0">
          <font>
-            <Font name="Bodoni MT" size="49.0" />
+            <Font name="Bodoni MT" size="45.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />

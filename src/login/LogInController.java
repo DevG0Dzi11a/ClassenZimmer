@@ -53,26 +53,31 @@ public class LogInController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void logInAction(ActionEvent event) {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/default", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
 
             String username = unameText.getText();
             String password = pwdText.getText();
 
             Statement stm = con.createStatement();
-            String sql = "select * from login where username ='" + username + "' and password='" + password + "'";
+            String sql = "select * from login_info where username ='" + username + "' and password='" + password + "'";
             ResultSet rs = stm.executeQuery(sql);
 
             if (rs.next()) {
-                dispose();
-                //Here homepage to load
+                System.out.println("Right uname pass");
+                //dispose();
+                Parent root = FXMLLoader.load(getClass().getResource("/homePage/homepage.fxml"));
+                Scene scene = new Scene(root);
+                Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                primaryStage.setTitle("ClassenZimmer");
+                primaryStage.setScene(scene);
+                primaryStage.show();
             } else {
-                
                 unameText.setText("");
                 pwdText.setText("");
 
@@ -97,5 +102,5 @@ public class LogInController implements Initializable {
     @FXML
     private void forgotPassAction(ActionEvent event) {
     }
-    
+
 }
