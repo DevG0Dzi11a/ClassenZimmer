@@ -5,8 +5,13 @@
  */
 package login;
 
+import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +25,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -51,6 +57,31 @@ public class LogInController implements Initializable {
 
     @FXML
     private void logInAction(ActionEvent event) {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/default", "root", "");
+
+            String username = unameText.getText();
+            String password = pwdText.getText();
+
+            Statement stm = con.createStatement();
+            String sql = "select * from login where username ='" + username + "' and password='" + password + "'";
+            ResultSet rs = stm.executeQuery(sql);
+
+            if (rs.next()) {
+                dispose();
+                //Here homepage to load
+            } else {
+                
+                unameText.setText("");
+                pwdText.setText("");
+
+            }
+            con.close();
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @FXML
