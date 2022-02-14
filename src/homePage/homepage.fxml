@@ -1,8 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-    
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="671.0" prefWidth="1201.0">
+         <top>
+            <AnchorPane prefHeight="71.0" prefWidth="1172.0" style="-fx-background-color: #0A1D8E;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="29.0" fitWidth="41.0" layoutX="27.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Menu%20bar.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="63.0" fitWidth="60.0" layoutX="114.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+      <AnchorPane layoutX="-22.0" layoutY="70.0" prefHeight="629.0" prefWidth="267.0" style="-fx-background-color: #0A1D8E; -fx-background-radius: 25;">
+         <children>
+            <VBox alignment="TOP_RIGHT" layoutX="23.0" layoutY="1.0" prefHeight="629.0" prefWidth="229.0" AnchorPane.rightAnchor="15.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="216.0" style="-fx-background-color: tranperant;" text="  Home" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="27.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="30.0" top="30.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Home%20Button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="230.0" style="-fx-background-color: transperant;" text=" Settings" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Settings%20Icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="244.0" style="-fx-background-color: tranperant;" text=" Calender" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Calender%20Icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="244.0" style="-fx-background-color: transperant;" text="  Help   " textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Help%20Icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="167.0" style="-fx-background-color: transperant;" text="To-Do" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Menu%20bar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
