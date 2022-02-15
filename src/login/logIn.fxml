@@ -53,12 +53,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="353.0" layoutY="407.0">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="400.0">
          <image>
             <Image url="@../image/pwd_logo.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="352.0" layoutY="330.0">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="349.0" layoutY="323.0">
          <image>
             <Image url="@../image/user_logo.png" />
          </image>
