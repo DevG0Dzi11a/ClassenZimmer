@@ -7,6 +7,5 @@
     -fx-background-color:  #9706cc;
 }
 .button:hover{
-    -fx-font-weight:bold;
     -fx-background-color: #c936ff;
 }
