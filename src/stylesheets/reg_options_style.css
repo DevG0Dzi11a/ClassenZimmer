@@ -1,12 +1,16 @@
 .button{
+    -fx-text-fill: #ffffff;
     -fx-background-radius: 50;
     -fx-border-style:solid;
     -fx-border-width: 2;
     -fx-border-radius: 50;
-    -fx-border-color:#c936ff;
+    -fx-border-color: #c936ff;
     -fx-background-color:  #9706cc;
 }
 .button:hover{
-    -fx-font-weight:bold;
     -fx-background-color: #c936ff;
+}
+.button:pressed{
+    -fx-text-fill: #000000;
+    -fx-background-color: #ffffff;
 }
