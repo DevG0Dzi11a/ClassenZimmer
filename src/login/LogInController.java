@@ -5,7 +5,6 @@
  */
 package login;
 
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -48,8 +47,6 @@ public class LogInController implements Initializable {
 
     /**
      * Initializes the controller class.
-     * @param url
-     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -69,20 +66,6 @@ public class LogInController implements Initializable {
                 Statement stm = connection.createStatement();
                 String sql = "select * from login_info where username ='" + username + "' and password='" + password + "'";
                 ResultSet rs = stm.executeQuery(sql);
-
-<<<<<<< Updated upstream
-            if (rs.next()) {
-                System.out.println("Right uname pass");
-                Parent root = FXMLLoader.load(getClass().getResource("/homePage/homepage.fxml"));
-                Scene scene = new Scene(root);
-                Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                primaryStage.setTitle("ClassenZimmer");
-                primaryStage.setScene(scene);
-                primaryStage.show();
-            } else {
-                unameText.setText("");
-                pwdText.setText("");
-=======
                 if (rs.next()) {
                     Parent root = FXMLLoader.load(getClass().getResource("/homePage/homepage.fxml"));
                     Scene scene = new Scene(root);
@@ -93,17 +76,17 @@ public class LogInController implements Initializable {
                 } else {
                     unameText.setText("");
                     pwdText.setText("");
->>>>>>> Stashed changes
-
                 }
                 connection.close();
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
+
         } else {
-            
+
         }
+
     }
 
     @FXML
