@@ -1,0 +1,10 @@
+.text-field{
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #787878;
+    -fx-text-fill: white;
+    -fx-font-family: "Bodoni MT";
+    -fx-font-size:25;
+    
+}
+
