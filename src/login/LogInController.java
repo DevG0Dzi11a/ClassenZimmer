@@ -48,6 +48,8 @@ public class LogInController implements Initializable {
 
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -56,17 +58,19 @@ public class LogInController implements Initializable {
 
     @FXML
     private void logInAction(ActionEvent event) {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
+        if (!unameText.getText().equals("") && !pwdText.getText().equals("")) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
 
-            String username = unameText.getText();
-            String password = pwdText.getText();
+                String username = unameText.getText();
+                String password = pwdText.getText();
 
-            Statement stm = con.createStatement();
-            String sql = "select * from login_info where username ='" + username + "' and password='" + password + "'";
-            ResultSet rs = stm.executeQuery(sql);
+                Statement stm = connection.createStatement();
+                String sql = "select * from login_info where username ='" + username + "' and password='" + password + "'";
+                ResultSet rs = stm.executeQuery(sql);
 
+<<<<<<< Updated upstream
             if (rs.next()) {
                 System.out.println("Right uname pass");
                 Parent root = FXMLLoader.load(getClass().getResource("/homePage/homepage.fxml"));
@@ -78,12 +82,27 @@ public class LogInController implements Initializable {
             } else {
                 unameText.setText("");
                 pwdText.setText("");
+=======
+                if (rs.next()) {
+                    Parent root = FXMLLoader.load(getClass().getResource("/homePage/homepage.fxml"));
+                    Scene scene = new Scene(root);
+                    Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    primaryStage.setTitle("ClassenZimmer");
+                    primaryStage.setScene(scene);
+                    primaryStage.show();
+                } else {
+                    unameText.setText("");
+                    pwdText.setText("");
+>>>>>>> Stashed changes
 
+                }
+                connection.close();
+
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
             }
-            con.close();
-
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        } else {
+            
         }
     }
 
