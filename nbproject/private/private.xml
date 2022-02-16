@@ -7,12 +7,10 @@
             <file>file:/F:/Github/ClassenZimmer/src/register/reg_options.fxml</file>
             <file>file:/F:/Github/ClassenZimmer/src/login/LogInController.java</file>
             <file>file:/F:/Github/ClassenZimmer/src/login/logIn.fxml</file>
-<<<<<<< Updated upstream
-=======
             <file>file:/F:/Github/ClassenZimmer/src/stylesheets/reg_options_style.css</file>
->>>>>>> Stashed changes
             <file>file:/F:/Github/ClassenZimmer/src/classenzimmer/ClassenZimmer.java</file>
             <file>file:/F:/Github/ClassenZimmer/src/register/Reg_optionsController.java</file>
+            <file>file:/F:/Github/ClassenZimmer/src/stylesheets/textfield_style.css</file>
         </group>
     </open-files>
 </project-private>
