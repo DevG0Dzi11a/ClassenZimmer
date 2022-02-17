@@ -91,7 +91,7 @@ public class LogInController implements Initializable {
 
     @FXML
     private void regAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/register/reg_options.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/register/register.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         primaryStage.setTitle("ClassenZimmer");
