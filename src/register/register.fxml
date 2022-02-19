@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.RegisterController">
    <children>
       <Label layoutX="350.0" layoutY="123.0" prefHeight="60.0" prefWidth="130.0" text="Username" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="123.0">
@@ -84,7 +83,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <MenuButton layoutX="656.0" layoutY="524.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="186.0" text="Select">
+      <MenuButton fx:id="menubtn" layoutX="656.0" layoutY="524.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="186.0" text="Select">
         <items>
           <MenuItem fx:id="menuT" mnemonicParsing="false" onAction="#teacherAction" text="Teacher" />
           <MenuItem fx:id="menuS" mnemonicParsing="false" onAction="#studentAction" text="Student" />
@@ -130,5 +129,30 @@
             </ImageView>
          </graphic>
       </Button>
+      <Label fx:id="unameAlert" layoutX="654.0" layoutY="173.0" prefHeight="30.0" prefWidth="466.0">
+         <font>
+            <Font name="Bodoni MT" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="emailAlert" layoutX="654.0" layoutY="273.0" prefHeight="30.0" prefWidth="466.0">
+         <font>
+            <Font name="Bodoni MT" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="passAlert" layoutX="654.0" layoutY="373.0" prefHeight="30.0" prefWidth="466.0">
+         <font>
+            <Font name="Bodoni MT" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="cpassAlert" layoutX="654.0" layoutY="473.0" prefHeight="30.0" prefWidth="466.0">
+         <font>
+            <Font name="Bodoni MT" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="desAlert" layoutX="656.0" layoutY="576.0" prefHeight="30.0" prefWidth="466.0">
+         <font>
+            <Font name="Bodoni MT" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
