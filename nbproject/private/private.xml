@@ -3,16 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Github/ClassenZimmer/src/stylesheets/login_style.css</file>
-            <file>file:/F:/Github/ClassenZimmer/src/register/reg_options.fxml</file>
-            <file>file:/F:/Github/ClassenZimmer/src/login/LogInController.java</file>
-            <file>file:/F:/Github/ClassenZimmer/src/login/logIn.fxml</file>
-<<<<<<< Updated upstream
-=======
-            <file>file:/F:/Github/ClassenZimmer/src/stylesheets/reg_options_style.css</file>
->>>>>>> Stashed changes
-            <file>file:/F:/Github/ClassenZimmer/src/classenzimmer/ClassenZimmer.java</file>
-            <file>file:/F:/Github/ClassenZimmer/src/register/Reg_optionsController.java</file>
+            <file>file:/G:/AUST%202.1/SD%20Lab/ClassenZimmer/src/homePage/HomepageController.java</file>
+            <file>file:/G:/AUST%202.1/SD%20Lab/ClassenZimmer/src/classenzimmer/ClassenZimmer.java</file>
         </group>
     </open-files>
 </project-private>

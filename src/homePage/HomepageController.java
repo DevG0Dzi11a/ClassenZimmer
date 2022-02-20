@@ -19,6 +19,14 @@ public class HomepageController implements Initializable {
     private ImageView Menuback;
     @FXML
     private AnchorPane slider;
+    @FXML
+    private ImageView Profileslide;
+    @FXML
+    private ImageView Profileslideback;
+    @FXML
+    private AnchorPane slider1;
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -53,6 +61,42 @@ public class HomepageController implements Initializable {
             slide.setOnFinished(e -> {
                 Menu.setVisible(true);
                 Menuback.setVisible(false);
+
+            });
+
+        });
+             
+        slider1.setTranslateX(-300);
+        Profileslide.setOnMouseClicked((MouseEvent event) -> {
+            TranslateTransition slide1 = new TranslateTransition();
+            slide1.setDuration(Duration.seconds(0.4));
+            slide1.setNode(slider1);
+
+            slide1.setToX(-100);
+            slide1.play();
+
+             slider1.setTranslateX(-300);
+
+            slide1.setOnFinished(e -> {
+                Profileslide.setVisible(false);
+                Profileslideback.setVisible(true);
+
+            });
+
+        });
+        Profileslideback.setOnMouseClicked((MouseEvent event) -> {
+            TranslateTransition slide1 = new TranslateTransition();
+            slide1.setDuration(Duration.seconds(0.4));
+            slide1.setNode(slider1);
+
+            slide1.setToX(-300);
+            slide1.play();
+
+            slider1.setTranslateX(-100);
+
+            slide1.setOnFinished(e -> {
+                Profileslide.setVisible(true);
+                Profileslideback.setVisible(false);
 
             });
 
