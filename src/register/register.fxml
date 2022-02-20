@@ -54,7 +54,7 @@
             <Font name="System Bold" size="33.0" />
          </font>
       </Label>
-      <TextField fx:id="uname" layoutX="655.0" layoutY="123.0" onKeyPressed="#unameKeyPressed" prefHeight="50.0" prefWidth="465.0" promptText="Enter Username" stylesheets="@../stylesheets/textfield_style.css" AnchorPane.leftAnchor="655.0" AnchorPane.topAnchor="123.0">
+      <TextField fx:id="uname" layoutX="655.0" layoutY="123.0" prefHeight="50.0" prefWidth="465.0" promptText="Enter Username" stylesheets="@../stylesheets/textfield_style.css" AnchorPane.leftAnchor="655.0" AnchorPane.topAnchor="123.0">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
@@ -62,7 +62,7 @@
             <Font name="Times New Roman" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="email" layoutX="655.0" layoutY="223.0" onKeyPressed="#emailKeyPressed" prefHeight="50.0" prefWidth="465.0" promptText="Enter Email Address" stylesheets="@../stylesheets/textfield_style.css" AnchorPane.leftAnchor="655.0" AnchorPane.topAnchor="223.0">
+      <TextField fx:id="email" layoutX="655.0" layoutY="223.0" prefHeight="50.0" prefWidth="465.0" promptText="Enter Email Address" stylesheets="@../stylesheets/textfield_style.css" AnchorPane.leftAnchor="655.0" AnchorPane.topAnchor="223.0">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
@@ -75,7 +75,7 @@
             <Font name="Bodoni MT Bold" size="35.0" />
          </font>
       </Label>
-      <Button fx:id="confirm" layoutX="947.0" layoutY="623.0" mnemonicParsing="false" onAction="#confirmAction" prefHeight="56.0" prefWidth="187.0" stylesheets="@../stylesheets/login_style.css" text="Confirm">
+      <Button layoutX="947.0" layoutY="623.0" mnemonicParsing="false" onAction="#confirmAction" prefHeight="56.0" prefWidth="187.0" stylesheets="@../stylesheets/login_style.css" text="Confirm">
          <font>
             <Font name="Bodoni MT" size="24.0" />
          </font>
@@ -83,7 +83,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <MenuButton layoutX="656.0" layoutY="524.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="220.0" text="Designation">
+      <MenuButton fx:id="menubtn" layoutX="656.0" layoutY="524.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="186.0" text="Select">
         <items>
           <MenuItem fx:id="menuT" mnemonicParsing="false" onAction="#teacherAction" text="Teacher" />
           <MenuItem fx:id="menuS" mnemonicParsing="false" onAction="#studentAction" text="Student" />
@@ -102,8 +102,8 @@
             <Font name="System Bold" size="33.0" />
          </font>
       </Label>
-      <PasswordField fx:id="npass" layoutX="681.0" layoutY="335.0" onKeyPressed="#newpassKeyPressed" prefHeight="50.0" prefWidth="465.0" promptText="Enter a Password" stylesheets="@../stylesheets/textfield_style.css" AnchorPane.leftAnchor="655.0" AnchorPane.topAnchor="323.0" />
-      <PasswordField fx:id="cpass" layoutX="691.0" layoutY="345.0" onKeyPressed="#conpassKeyPressed" prefHeight="50.0" prefWidth="465.0" promptText="Retype the Password" stylesheets="@../stylesheets/textfield_style.css" AnchorPane.leftAnchor="655.0" AnchorPane.topAnchor="423.0" />
+      <PasswordField fx:id="npass" layoutX="681.0" layoutY="335.0" prefHeight="50.0" prefWidth="465.0" promptText="Enter a Password" stylesheets="@../stylesheets/textfield_style.css" AnchorPane.leftAnchor="655.0" AnchorPane.topAnchor="323.0" />
+      <PasswordField fx:id="cpass" layoutX="691.0" layoutY="345.0" prefHeight="50.0" prefWidth="465.0" promptText="Retype the Password" stylesheets="@../stylesheets/textfield_style.css" AnchorPane.leftAnchor="655.0" AnchorPane.topAnchor="423.0" />
       <ImageView fitHeight="700.0" fitWidth="293.0" layoutY="3.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../image/bg.jpg" />
@@ -129,27 +129,27 @@
             </ImageView>
          </graphic>
       </Button>
-      <Label fx:id="unameAlert" layoutX="657.0" layoutY="172.0" prefHeight="37.0" prefWidth="465.0" AnchorPane.leftAnchor="655.0">
+      <Label fx:id="unameAlert" layoutX="654.0" layoutY="173.0" prefHeight="30.0" prefWidth="466.0">
          <font>
             <Font name="Bodoni MT" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="emailAlert" layoutX="656.0" layoutY="274.0" prefHeight="38.0" prefWidth="465.0" AnchorPane.leftAnchor="655.0">
+      <Label fx:id="emailAlert" layoutX="654.0" layoutY="273.0" prefHeight="30.0" prefWidth="466.0">
          <font>
             <Font name="Bodoni MT" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="passAlert" layoutX="655.0" layoutY="373.0" prefHeight="38.0" prefWidth="465.0" AnchorPane.leftAnchor="655.0">
+      <Label fx:id="passAlert" layoutX="654.0" layoutY="373.0" prefHeight="30.0" prefWidth="466.0">
          <font>
             <Font name="Bodoni MT" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="cpassAlert" layoutX="698.0" layoutY="474.0" prefHeight="38.0" prefWidth="465.0" AnchorPane.leftAnchor="655.0">
+      <Label fx:id="cpassAlert" layoutX="654.0" layoutY="473.0" prefHeight="30.0" prefWidth="466.0">
          <font>
             <Font name="Bodoni MT" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="desAlert" layoutX="655.0" layoutY="577.0" prefHeight="38.0" prefWidth="349.0" AnchorPane.leftAnchor="655.0">
+      <Label fx:id="desAlert" layoutX="656.0" layoutY="576.0" prefHeight="30.0" prefWidth="466.0">
          <font>
             <Font name="Bodoni MT" size="18.0" />
          </font>
