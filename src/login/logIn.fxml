@@ -2,21 +2,18 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #0A1D8E;" stylesheets="@../stylesheets/tekxfiild_style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LogInController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" stylesheets="@../stylesheets/tekxfiild_style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LogInController">
    <children>
-      <ImageView fx:id="image_logo" fitHeight="143.0" fitWidth="135.0" layoutX="455.0" layoutY="91.0" AnchorPane.leftAnchor="532.5" AnchorPane.topAnchor="100.0">
-         <image>
-            <Image url="@../image/Logo.png" />
-         </image>
-      </ImageView>
-      <TextField fx:id="unameText" layoutX="384.0" layoutY="313.0" prefHeight="50.0" prefWidth="465.0" promptText="Enter Username" stylesheets="@../stylesheets/textfield_style.css" AnchorPane.leftAnchor="384.0">
+      <TextField fx:id="unameText" layoutX="520.0" layoutY="245.0" onKeyPressed="#unameKeyPressed" prefHeight="50.0" prefWidth="465.0" promptText="Enter Email" stylesheets="@../stylesheets/textfield_style.css">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
@@ -24,7 +21,7 @@
             <Font name="Times New Roman" size="20.0" />
          </font>
       </TextField>
-      <Button fx:id="loginbtn" layoutX="354.0" layoutY="466.0" mnemonicParsing="false" onAction="#logInAction" prefHeight="35.0" prefWidth="190.0" stylesheets="@../stylesheets/login_style.css" text="Log in" AnchorPane.leftAnchor="350.0">
+      <Button fx:id="loginbtn" layoutX="517.0" layoutY="398.0" mnemonicParsing="false" onAction="#logInAction" prefHeight="35.0" prefWidth="190.0" stylesheets="@../stylesheets/login_style.css" text="Log in">
          <font>
             <Font name="Bodoni MT" size="24.0" />
          </font>
@@ -32,12 +29,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <PasswordField fx:id="pwdText" layoutX="384.0" layoutY="388.0" prefHeight="50.0" prefWidth="465.0" promptText="Enter Password" stylesheets="@../stylesheets/textfield_style.css" AnchorPane.leftAnchor="384.0">
+      <PasswordField fx:id="pwdText" layoutX="520.0" layoutY="320.0" onKeyPressed="#passKeyPressed" prefHeight="50.0" prefWidth="465.0" promptText="Enter Password" stylesheets="@../stylesheets/textfield_style.css">
          <font>
             <Font name="Times New Roman" size="20.0" />
          </font>
       </PasswordField>
-      <Button fx:id="regbtn" layoutX="556.0" layoutY="465.0" mnemonicParsing="false" onAction="#regAction" prefHeight="38.0" prefWidth="190.0" stylesheets="@../stylesheets/login_style.css" text="Register" AnchorPane.rightAnchor="350.0">
+      <Button fx:id="regbtn" layoutX="799.0" layoutY="397.0" mnemonicParsing="false" onAction="#regAction" prefHeight="38.0" prefWidth="190.0" stylesheets="@../stylesheets/login_style.css" text="Register">
          <font>
             <Font name="Bodoni MT" size="24.0" />
          </font>
@@ -45,7 +42,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="forgotpassbtn" layoutX="562.0" layoutY="556.0" mnemonicParsing="false" onAction="#forgotPassAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" stylesheets="@../stylesheets/login_style.css" text="Forgot Password?" textFill="WHITE" AnchorPane.leftAnchor="490.0">
+      <Button fx:id="forgotpassbtn" layoutX="640.0" layoutY="488.0" mnemonicParsing="false" onAction="#forgotPassAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: red;" stylesheets="@../stylesheets/login_style.css" text="Forgot Password?" textFill="RED">
          <font>
             <Font size="20.0" />
          </font>
@@ -53,14 +50,28 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="350.0" layoutY="400.0">
+      <Pane layoutX="26.0" layoutY="10.0" prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #0A1D8E;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="image_logo" fitHeight="143.0" fitWidth="135.0" layoutX="81.0" layoutY="260.0">
+               <image>
+                  <Image url="@../image/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="344.0" layoutY="63.0" prefHeight="59.0" prefWidth="850.0" style="-fx-border-color: #000000; -fx-border-width: 0 0 0 2; -fx-background-color: #fff5c2;" text="    USER LOGIN" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="474.0" layoutY="326.0">
          <image>
-            <Image url="@../image/pwd_logo.png" />
+            <Image url="@../image/key.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="349.0" layoutY="323.0">
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="474.0" layoutY="253.0">
          <image>
-            <Image url="@../image/user_logo.png" />
+            <Image url="@../image/user.png" />
          </image>
       </ImageView>
    </children>
