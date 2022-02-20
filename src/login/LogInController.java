@@ -8,6 +8,7 @@ package login;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.net.URL;
+import javafx.scene.input.KeyCode;
 import java.security.MessageDigest;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -27,6 +28,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 /**
@@ -56,6 +58,7 @@ public class LogInController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
+
     public static String MD5(String s) throws Exception {
         MessageDigest m = MessageDigest.getInstance("MD5");
         m.update(s.getBytes(), 0, s.length());
@@ -71,7 +74,6 @@ public class LogInController implements Initializable {
 
                 String username = unameText.getText();
                 String password = MD5(pwdText.getText());
-
                 Statement stm = connection.createStatement();
                 String sql = "select * from login_info where email ='" + username + "' and password='" + password + "'";
                 ResultSet rs = stm.executeQuery(sql);
@@ -95,7 +97,16 @@ public class LogInController implements Initializable {
             }
 
         } else {
-
+            Alert alert = new Alert(AlertType.INFORMATION);
+            if (unameText.getText().contains("")) {
+                alert.setHeaderText("Information");
+                alert.setContentText("Email field is empty\nDon't have and account?\nClick on Register");
+                alert.show();
+            }else if(pwdText.getText().contains("")){
+                alert.setHeaderText("Information");
+                alert.setContentText("Password field is empty\nDon't have and account?\nClick on Register");
+                alert.show();
+            }
         }
 
     }
@@ -112,6 +123,24 @@ public class LogInController implements Initializable {
 
     @FXML
     private void forgotPassAction(ActionEvent event) {
+        
+    }
+    
+    @FXML
+    private void unameKeyPressed(KeyEvent event){
+        if(KeyCode.ENTER == event.getCode()){
+            if(!unameText.getText().equals(""))
+                pwdText.requestFocus();
+        }
+    }
+    
+    @FXML
+    private void passKeyPressed(KeyEvent event){
+        if(KeyCode.ENTER == event.getCode()){
+            if(!pwdText.getText().equals("")){
+                loginbtn.fire();
+            }
+        }
     }
 
 }

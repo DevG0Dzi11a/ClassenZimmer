@@ -24,11 +24,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -40,6 +43,9 @@ import javafx.stage.Stage;
 public class RegisterController implements Initializable {
 
     String user = "";
+
+    @FXML
+    private Button confirm;
 
     @FXML
     private PasswordField cpass;
@@ -190,6 +196,54 @@ public class RegisterController implements Initializable {
         primaryStage.setTitle("ClassenZimmer");
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    @FXML
+    private void unameKeyPressed(KeyEvent event) {
+        if (KeyCode.ENTER == event.getCode()) {
+            if (!uname.getText().equals("")) {
+                email.requestFocus();
+            } else {
+                unameAlert.setTextFill(Color.RED);
+                unameAlert.setText("*Username cannot be empty!");
+            }
+        }
+    }
+
+    @FXML
+    private void emailKeyPressed(KeyEvent event) {
+        if (KeyCode.ENTER == event.getCode()) {
+            if (!email.getText().equals("")) {
+                npass.requestFocus();
+            } else{
+                emailAlert.setTextFill(Color.RED);
+                emailAlert.setText("*Email cannot be empty!");
+            }
+        }
+    }
+
+    @FXML
+    private void newpassKeyPressed(KeyEvent event) {
+        if (KeyCode.ENTER == event.getCode()) {
+            if (!npass.getText().equals("")) {
+                cpass.requestFocus();
+            } else {
+                passAlert.setTextFill(Color.RED);
+                passAlert.setText("*Password cannot be empty!");
+            }
+        }
+    }
+
+    @FXML
+    private void conpassKeyPressed(KeyEvent event) {
+        if (KeyCode.ENTER == event.getCode()) {
+            if (!cpass.getText().equals("")) {
+                confirm.fire();
+            } else {
+                cpassAlert.setTextFill(Color.RED);
+                cpassAlert.setText("*Enter the password again!");
+            }
+        }
     }
 
 }
