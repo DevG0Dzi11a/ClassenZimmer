@@ -1,9 +1,9 @@
+
 package homePage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.animation.TranslateTransition;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
@@ -11,26 +11,32 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
-public class HomepageController implements Initializable {
+/**
+ * FXML Controller class
+ *
+ * @author Shawon
+ */
+public class HomeController implements Initializable {
 
-    @FXML
-    private ImageView Menu;
-    @FXML
-    private ImageView Menuback;
     @FXML
     private AnchorPane slider;
     @FXML
+    private AnchorPane slider1;
+    @FXML
+    private ImageView Menu;
+    @FXML
     private ImageView Profileslide;
     @FXML
-    private ImageView Profileslideback;
+    private ImageView Menuback;
     @FXML
-    private AnchorPane slider1;
+    private ImageView Profileslideback;
 
-
-
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        slider.setTranslateX(-298);
+       slider.setTranslateX(-298);
         Menu.setOnMouseClicked((MouseEvent event) -> {
             TranslateTransition slide = new TranslateTransition();
             slide.setDuration(Duration.seconds(0.4));
@@ -61,21 +67,21 @@ public class HomepageController implements Initializable {
             slide.setOnFinished(e -> {
                 Menu.setVisible(true);
                 Menuback.setVisible(false);
-
             });
 
         });
-             
-        slider1.setTranslateX(-300);
+        //profile slide
+        
+        slider1.setTranslateY(-326);
         Profileslide.setOnMouseClicked((MouseEvent event) -> {
             TranslateTransition slide1 = new TranslateTransition();
             slide1.setDuration(Duration.seconds(0.4));
             slide1.setNode(slider1);
 
-            slide1.setToX(-100);
+            slide1.setToY(0);
             slide1.play();
 
-             slider1.setTranslateX(-300);
+            slider1.setTranslateY(-326);
 
             slide1.setOnFinished(e -> {
                 Profileslide.setVisible(false);
@@ -89,19 +95,18 @@ public class HomepageController implements Initializable {
             slide1.setDuration(Duration.seconds(0.4));
             slide1.setNode(slider1);
 
-            slide1.setToX(-300);
+            slide1.setToY(-326);
             slide1.play();
 
-            slider1.setTranslateX(-100);
+            slider1.setTranslateY(0);
 
             slide1.setOnFinished(e -> {
                 Profileslide.setVisible(true);
                 Profileslideback.setVisible(false);
-
             });
 
         });
-
-    }
-
+       
+    }    
+    
 }
