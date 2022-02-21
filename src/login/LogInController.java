@@ -30,6 +30,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import org.controlsfx.control.Notifications;
 
 /**
  * FXML Controller class
@@ -71,15 +72,20 @@ public class LogInController implements Initializable {
             try {
                 String mail = null;
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
-                
+                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "sabbir", "sabbir@142");
+
                 String username = unameText.getText();
                 String password = MD5(pwdText.getText());
                 Statement stm = connection.createStatement();
                 String sql = "select * from login_info where email ='" + username + "' and password='" + password + "'";
                 ResultSet rs = stm.executeQuery(sql);
                 if (rs.next()) {
-                    Parent root = FXMLLoader.load(getClass().getResource("/homePage/homepage.fxml"));
+                    Notifications.create()
+                            .title("User Verified")
+                            .text("Login Successful!")
+                            .darkStyle()
+                            .showInformation();
+                    Parent root = FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
                     Scene scene = new Scene(root);
                     Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     primaryStage.setTitle("ClassenZimmer");
@@ -123,7 +129,13 @@ public class LogInController implements Initializable {
     }
 
     @FXML
-    private void forgotPassAction(ActionEvent event) {
+    private void forgotPassAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/passForgot/enterMail.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        primaryStage.setTitle("ClassenZimmer");
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
     }
 
