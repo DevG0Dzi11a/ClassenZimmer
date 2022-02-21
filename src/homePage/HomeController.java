@@ -14,6 +14,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -38,6 +40,11 @@ public class HomeController implements Initializable {
     private ImageView Profileslideback;
     @FXML
     private ImageView Add;
+    @FXML
+    private FlowPane Flowpane;
+    
+    @FXML
+    private BorderPane borderpan;
     
     /**
      * Initializes the controller class.
@@ -117,17 +124,11 @@ public class HomeController implements Initializable {
 
         // Add Class
         Add.setOnMouseClicked((MouseEvent event) -> {
-            AnchorPane insert = new AnchorPane();
+            //AnchorPane insert = new AnchorPane();
             
-            Scene scene=null;
-            try {
-                scene = new Scene(FXMLLoader.load(getClass().getResource("addClass.fxml")));
-            } catch (IOException ex) {
-                Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            primaryStage.setScene(scene);
-            primaryStage.show();
+            //Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            //primaryStage.setScene(scene);
+            //primaryStage.show();
             
 
         });
