@@ -11,7 +11,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
-public class HomepageController implements Initializable {
+public class HomeController implements Initializable {
 
     @FXML
     private ImageView Menu;
