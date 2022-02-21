@@ -65,7 +65,7 @@ public class LogInController implements Initializable {
         m.update(s.getBytes(), 0, s.length());
         return new BigInteger(1, m.digest()).toString(16);
     }
-
+    ///to merge
     @FXML
     private void logInAction(ActionEvent event) {
         if (!unameText.getText().equals("") && !pwdText.getText().equals("")) {
