@@ -1,4 +1,3 @@
-
 package passForgot;
 
 import java.io.IOException;
@@ -37,7 +36,7 @@ public class ResetPassController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void resetAction(ActionEvent event) {
@@ -52,5 +51,5 @@ public class ResetPassController implements Initializable {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-    
+
 }
