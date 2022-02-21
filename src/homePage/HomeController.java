@@ -43,15 +43,6 @@ public class HomeController implements Initializable {
     private ImageView Add;
     @FXML
     private Button logoutbtn;
-    @FXML
-    private ImageView notifslide;
-    @FXML
-    private ImageView notifslideback;
-
-    
-    @FXML
-    private AnchorPane slider2;
-
     
     /**
      * Initializes the controller class.
@@ -102,12 +93,8 @@ public class HomeController implements Initializable {
 
             slide1.setToY(0);
             slide1.play();
-            slider2.setTranslateY(-476);
-           notifslide.setVisible(true);
-           notifslideback.setVisible(false);
 
             slider1.setTranslateY(-326);
-            
 
             slide1.setOnFinished(e -> {
                 Profileslide.setVisible(false);
@@ -132,44 +119,6 @@ public class HomeController implements Initializable {
             });
 
         });
-        slider2.setTranslateY(-476);
-        notifslide.setOnMouseClicked((MouseEvent event) -> {
-            TranslateTransition slide2 = new TranslateTransition();
-            slide2.setDuration(Duration.seconds(0.4));
-            slide2.setNode(slider2);
-
-            slide2.setToY(0);
-            slide2.play();
-            slider1.setTranslateY(-326);
-
-            slider2.setTranslateY(-476);
-            Profileslide.setVisible(true);
-            Profileslideback.setVisible(false);
-
-            slide2.setOnFinished(e -> {
-                notifslide.setVisible(false);
-                notifslideback.setVisible(true);
-
-            });
-
-        });
-        notifslideback.setOnMouseClicked((MouseEvent event) -> {
-            TranslateTransition slide2 = new TranslateTransition();
-            slide2.setDuration(Duration.seconds(0.4));
-            slide2.setNode(slider2);
-
-            slide2.setToY(-476);
-            slide2.play();
-
-            slider2.setTranslateY(0);
-
-            slide2.setOnFinished(e -> {
-                notifslide.setVisible(true);
-                notifslideback.setVisible(false);
-            });
-
-        });
-
 
         // Add Class
         Add.setOnMouseClicked((MouseEvent event) -> {
