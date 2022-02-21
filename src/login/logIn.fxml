@@ -8,7 +8,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" stylesheets="@../stylesheets/tekxfiild_style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LogInController">
@@ -53,15 +52,6 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Pane layoutX="26.0" layoutY="10.0" prefHeight="700.0" prefWidth="300.0" style="-fx-background-color: #0A1D8E;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <ImageView fx:id="image_logo" fitHeight="143.0" fitWidth="135.0" layoutX="81.0" layoutY="260.0">
-               <image>
-                  <Image url="@../image/Logo.png" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
       <Label layoutX="344.0" layoutY="63.0" prefHeight="59.0" prefWidth="850.0" style="-fx-border-color: #000000; -fx-border-width: 0 0 0 2; -fx-background-color: #fff5c2;" text="    USER LOGIN" AnchorPane.rightAnchor="0.0">
          <font>
             <Font name="Bodoni MT Bold" size="35.0" />
@@ -75,6 +65,16 @@
       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="474.0" layoutY="253.0">
          <image>
             <Image url="@../image/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="700.0" fitWidth="1200.0" layoutX="-882.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../image/bg.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image_logo" fitHeight="143.0" fitWidth="135.0" layoutX="92.0" layoutY="274.0">
+         <image>
+            <Image url="@../image/Logo.png" />
          </image>
       </ImageView>
    </children>

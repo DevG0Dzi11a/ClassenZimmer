@@ -30,6 +30,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import org.controlsfx.control.Notifications;
 
 /**
  * FXML Controller class
@@ -72,13 +73,18 @@ public class LogInController implements Initializable {
                 String mail = null;
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
-                
+
                 String username = unameText.getText();
                 String password = MD5(pwdText.getText());
                 Statement stm = connection.createStatement();
                 String sql = "select * from login_info where email ='" + username + "' and password='" + password + "'";
                 ResultSet rs = stm.executeQuery(sql);
                 if (rs.next()) {
+                    Notifications.create()
+                            .title("User Verified")
+                            .text("Login Successful!")
+                            .darkStyle()
+                            .showInformation();
                     Parent root = FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
                     Scene scene = new Scene(root);
                     Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -123,7 +129,13 @@ public class LogInController implements Initializable {
     }
 
     @FXML
-    private void forgotPassAction(ActionEvent event) {
+    private void forgotPassAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/passForgot/enterMail.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        primaryStage.setTitle("ClassenZimmer");
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
     }
 

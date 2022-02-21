@@ -6,11 +6,14 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -38,6 +41,8 @@ public class HomeController implements Initializable {
     private ImageView Profileslideback;
     @FXML
     private ImageView Add;
+    @FXML
+    private Button logoutbtn;
     
     /**
      * Initializes the controller class.
@@ -131,7 +136,16 @@ public class HomeController implements Initializable {
             
 
         });
+        
 
     }
-
+    @FXML
+    void logOutAction(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/login/logIn.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        primaryStage.setTitle("ClassenZimmer");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
 }
