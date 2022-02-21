@@ -5,9 +5,11 @@
  */
 package login;
 
-import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.net.URL;
+import javafx.scene.input.KeyCode;
+import java.security.MessageDigest;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -20,10 +22,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 /**
@@ -48,12 +53,16 @@ public class LogInController implements Initializable {
 
     /**
      * Initializes the controller class.
-     * @param url
-     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    }
+
+    public static String MD5(String s) throws Exception {
+        MessageDigest m = MessageDigest.getInstance("MD5");
+        m.update(s.getBytes(), 0, s.length());
+        return new BigInteger(1, m.digest()).toString(16);
     }
 
     @FXML
@@ -64,25 +73,10 @@ public class LogInController implements Initializable {
                 Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
 
                 String username = unameText.getText();
-                String password = pwdText.getText();
-
+                String password = MD5(pwdText.getText());
                 Statement stm = connection.createStatement();
-                String sql = "select * from login_info where username ='" + username + "' and password='" + password + "'";
+                String sql = "select * from login_info where email ='" + username + "' and password='" + password + "'";
                 ResultSet rs = stm.executeQuery(sql);
-
-<<<<<<< Updated upstream
-            if (rs.next()) {
-                System.out.println("Right uname pass");
-                Parent root = FXMLLoader.load(getClass().getResource("/homePage/homepage.fxml"));
-                Scene scene = new Scene(root);
-                Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                primaryStage.setTitle("ClassenZimmer");
-                primaryStage.setScene(scene);
-                primaryStage.show();
-            } else {
-                unameText.setText("");
-                pwdText.setText("");
-=======
                 if (rs.next()) {
                     Parent root = FXMLLoader.load(getClass().getResource("/homePage/homepage.fxml"));
                     Scene scene = new Scene(root);
@@ -91,24 +85,35 @@ public class LogInController implements Initializable {
                     primaryStage.setScene(scene);
                     primaryStage.show();
                 } else {
-                    unameText.setText("");
-                    pwdText.setText("");
->>>>>>> Stashed changes
-
+                    Alert alert = new Alert(AlertType.WARNING);
+                    alert.setHeaderText("Warning!");
+                    alert.setContentText("Wrong username or password!");
+                    alert.show();
                 }
                 connection.close();
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
+
         } else {
-            
+            Alert alert = new Alert(AlertType.INFORMATION);
+            if (unameText.getText().contains("")) {
+                alert.setHeaderText("Information");
+                alert.setContentText("Email field is empty\nDon't have and account?\nClick on Register");
+                alert.show();
+            }else if(pwdText.getText().contains("")){
+                alert.setHeaderText("Information");
+                alert.setContentText("Password field is empty\nDon't have and account?\nClick on Register");
+                alert.show();
+            }
         }
+
     }
 
     @FXML
     private void regAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/register/reg_options.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/register/register.fxml"));
         Scene scene = new Scene(root);
         Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         primaryStage.setTitle("ClassenZimmer");
@@ -118,6 +123,24 @@ public class LogInController implements Initializable {
 
     @FXML
     private void forgotPassAction(ActionEvent event) {
+        
+    }
+    
+    @FXML
+    private void unameKeyPressed(KeyEvent event){
+        if(KeyCode.ENTER == event.getCode()){
+            if(!unameText.getText().equals(""))
+                pwdText.requestFocus();
+        }
+    }
+    
+    @FXML
+    private void passKeyPressed(KeyEvent event){
+        if(KeyCode.ENTER == event.getCode()){
+            if(!pwdText.getText().equals("")){
+                loginbtn.fire();
+            }
+        }
     }
 
 }
