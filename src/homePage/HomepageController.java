@@ -53,7 +53,6 @@ public class HomepageController implements Initializable {
             slide.setOnFinished(e -> {
                 Menu.setVisible(true);
                 Menuback.setVisible(false);
-
             });
 
         });

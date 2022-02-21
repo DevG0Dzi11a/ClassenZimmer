@@ -69,9 +69,10 @@ public class LogInController implements Initializable {
     private void logInAction(ActionEvent event) {
         if (!unameText.getText().equals("") && !pwdText.getText().equals("")) {
             try {
+                String mail = null;
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
-
+                
                 String username = unameText.getText();
                 String password = MD5(pwdText.getText());
                 Statement stm = connection.createStatement();
@@ -102,7 +103,7 @@ public class LogInController implements Initializable {
                 alert.setHeaderText("Information");
                 alert.setContentText("Email field is empty\nDon't have and account?\nClick on Register");
                 alert.show();
-            }else if(pwdText.getText().contains("")){
+            } else if (pwdText.getText().contains("")) {
                 alert.setHeaderText("Information");
                 alert.setContentText("Password field is empty\nDon't have and account?\nClick on Register");
                 alert.show();
@@ -123,21 +124,22 @@ public class LogInController implements Initializable {
 
     @FXML
     private void forgotPassAction(ActionEvent event) {
-        
+
     }
-    
+
     @FXML
-    private void unameKeyPressed(KeyEvent event){
-        if(KeyCode.ENTER == event.getCode()){
-            if(!unameText.getText().equals(""))
+    private void unameKeyPressed(KeyEvent event) {
+        if (KeyCode.ENTER == event.getCode()) {
+            if (!unameText.getText().equals("")) {
                 pwdText.requestFocus();
+            }
         }
     }
-    
+
     @FXML
-    private void passKeyPressed(KeyEvent event){
-        if(KeyCode.ENTER == event.getCode()){
-            if(!pwdText.getText().equals("")){
+    private void passKeyPressed(KeyEvent event) {
+        if (KeyCode.ENTER == event.getCode()) {
+            if (!pwdText.getText().equals("")) {
                 loginbtn.fire();
             }
         }

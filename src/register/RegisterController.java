@@ -43,6 +43,7 @@ import javafx.stage.Stage;
 public class RegisterController implements Initializable {
 
     String user = "";
+    Alert alert = new Alert(AlertType.ERROR);
 
     @FXML
     private Button confirm;
@@ -103,7 +104,6 @@ public class RegisterController implements Initializable {
             String mail = null;//Connection for database
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
-
             String username = null;
             String usernameCheck = uname.getText();
             Statement ustm = connection.createStatement();
@@ -215,7 +215,7 @@ public class RegisterController implements Initializable {
         if (KeyCode.ENTER == event.getCode()) {
             if (!email.getText().equals("")) {
                 npass.requestFocus();
-            } else{
+            } else {
                 emailAlert.setTextFill(Color.RED);
                 emailAlert.setText("*Email cannot be empty!");
             }
