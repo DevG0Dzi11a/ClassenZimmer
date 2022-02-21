@@ -66,7 +66,7 @@ public class EnterMailController implements Initializable {
     private void resetAction(ActionEvent event) throws MessagingException, UnsupportedEncodingException, SQLException, ClassNotFoundException, IOException {
 
         Class.forName("com.mysql.jdbc.Driver");//Connection for database
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "sabbir", "sabbir@142");
         String emailCheck = emailText.getText();
         Statement estm = connection.createStatement();
         String esql = "select * from login_info where email ='" + emailCheck + "'";// check if the email is rregistered

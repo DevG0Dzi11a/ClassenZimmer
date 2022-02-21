@@ -72,7 +72,7 @@ public class LogInController implements Initializable {
             try {
                 String mail = null;
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
+                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "sabbir", "sabbir@142");
 
                 String username = unameText.getText();
                 String password = MD5(pwdText.getText());

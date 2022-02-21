@@ -104,7 +104,7 @@ public class RegisterController implements Initializable {
         if (!"".equals(uname.getText()) && !email.getText().equals("") && !npass.getText().equals("") && !cpass.getText().equals("") && !user.equals("")) {
             String mail = null;
             Class.forName("com.mysql.jdbc.Driver");//Connection for database
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "sabbir", "sabbir@142");
             String username = null;
             String usernameCheck = uname.getText();
             Statement ustm = connection.createStatement();
