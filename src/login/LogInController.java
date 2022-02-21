@@ -79,7 +79,7 @@ public class LogInController implements Initializable {
                 String sql = "select * from login_info where email ='" + username + "' and password='" + password + "'";
                 ResultSet rs = stm.executeQuery(sql);
                 if (rs.next()) {
-                    Parent root = FXMLLoader.load(getClass().getResource("/homePage/homepage.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
                     Scene scene = new Scene(root);
                     Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     primaryStage.setTitle("ClassenZimmer");
