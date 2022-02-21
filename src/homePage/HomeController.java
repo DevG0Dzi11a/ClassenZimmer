@@ -1,9 +1,13 @@
 package homePage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -34,9 +38,7 @@ public class HomeController implements Initializable {
     private ImageView Profileslideback;
     @FXML
     private ImageView Add;
-    @FXML
-    private AnchorPane Class;
-
+    
     /**
      * Initializes the controller class.
      */
@@ -115,12 +117,17 @@ public class HomeController implements Initializable {
 
         // Add Class
         Add.setOnMouseClicked((MouseEvent event) -> {
-            AnchorPane insert = new AnchorPane(Class);
+            AnchorPane insert = new AnchorPane();
             
+            Scene scene=null;
+            try {
+                scene = new Scene(FXMLLoader.load(getClass().getResource("addClass.fxml")));
+            } catch (IOException ex) {
+                Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
+            }
             Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-           // Scene = new Scene(FXMLLoader.load(getClass().getResource("addClass.fxml")), 640, 480);
-            //primaryStage.setScene(scene);
-           // primaryStage.show();
+            primaryStage.setScene(scene);
+            primaryStage.show();
             
 
         });
