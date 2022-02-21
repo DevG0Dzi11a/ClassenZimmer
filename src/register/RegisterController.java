@@ -34,6 +34,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import org.controlsfx.control.Notifications;
 
 /**
  * FXML Controller class
@@ -43,6 +44,7 @@ import javafx.stage.Stage;
 public class RegisterController implements Initializable {
 
     String user = "";
+    Alert alert = new Alert(AlertType.ERROR);
 
     @FXML
     private Button confirm;
@@ -100,22 +102,21 @@ public class RegisterController implements Initializable {
     @FXML
     private void confirmAction(ActionEvent event) throws IOException, ClassNotFoundException, SQLException, Exception {
         if (!"".equals(uname.getText()) && !email.getText().equals("") && !npass.getText().equals("") && !cpass.getText().equals("") && !user.equals("")) {
-            String mail = null;//Connection for database
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "root", "");
-
+            String mail = null;
+            Class.forName("com.mysql.jdbc.Driver");//Connection for database
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classenzimmer", "sabbir", "sabbir@142");
             String username = null;
             String usernameCheck = uname.getText();
             Statement ustm = connection.createStatement();
             String usql = "select * from login_info where username ='" + usernameCheck + "'";
             ResultSet urs = ustm.executeQuery(usql);
-            if (urs.next()) {
+            if (urs.next()) {//check if username is already taken
                 unameAlert.setTextFill(Color.RED);
                 unameAlert.setText("*Username has already been taken!");
             } else {
                 unameAlert.setText("");
                 username = uname.getText();
-                if (!email.getText().contains("@") && !email.getText().contains(".com")) {
+                if (!email.getText().contains("@") && !email.getText().contains(".com")) {//checking valid email address
                     emailAlert.setTextFill(Color.RED);
                     emailAlert.setText("*Enter a valid email address");
                 } else {
@@ -124,23 +125,28 @@ public class RegisterController implements Initializable {
                     Statement estm = connection.createStatement();
                     String esql = "select * from login_info where email ='" + emailCheck + "'";
                     ResultSet ers = estm.executeQuery(esql);
-                    if (ers.next()) {
+                    if (ers.next()) {//check if email is already taken
                         emailAlert.setTextFill(Color.RED);
                         emailAlert.setText("*Email ID is already in use!");
                     } else {
                         emailAlert.setText("");
                         mail = email.getText();
-                        if (npass.getText().equals(cpass.getText())) {
+                        if (npass.getText().equals(cpass.getText())) {// inserting the values in DB
                             String pwd = MD5(npass.getText());
                             String des = user;
                             String insert1 = "INSERT INTO login_info(username, email, password, des) VALUES('";
                             String insert2 = username + "','" + mail + "','" + pwd + "','" + des + "')";
                             String sql = insert1 + insert2;
+                            Notifications.create()//push notification
+                                    .title("Congratulations!")
+                                    .text("Registration Successful!")
+                                    .darkStyle()
+                                    .showInformation();
 
                             Statement statement = connection.createStatement();
                             statement.executeUpdate(sql);
                             connection.close();
-                            Parent root = FXMLLoader.load(getClass().getResource("/homePage/homepage.fxml"));
+                            Parent root = FXMLLoader.load(getClass().getResource("/homePage/home.fxml"));
                             Scene scene = new Scene(root);
                             Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                             primaryStage.setTitle("ClassenZimmer");
@@ -154,7 +160,7 @@ public class RegisterController implements Initializable {
                 }
             }
 
-        } else {
+        } else {//if any field is empty
             if (uname.getText().equals("")) {
                 unameAlert.setTextFill(Color.RED);
                 unameAlert.setText("*Please enter a username!");
@@ -175,14 +181,14 @@ public class RegisterController implements Initializable {
     }
 
     @FXML
-    private void teacherAction(ActionEvent event) {
+    private void teacherAction(ActionEvent event) {//Menu button selection
         menubtn.setTextFill(Color.BLUE);
         menubtn.setText("Teacher");
         user = "teacher";
     }
 
     @FXML
-    private void studentAction(ActionEvent event) {
+    private void studentAction(ActionEvent event) {//Menu button selection
         menubtn.setTextFill(Color.BLUE);
         menubtn.setText("Student");
         user = "student";
@@ -200,7 +206,7 @@ public class RegisterController implements Initializable {
 
     @FXML
     private void unameKeyPressed(KeyEvent event) {
-        if (KeyCode.ENTER == event.getCode()) {
+        if (KeyCode.ENTER == event.getCode()) {//Enter key pressed
             if (!uname.getText().equals("")) {
                 email.requestFocus();
             } else {
@@ -212,10 +218,10 @@ public class RegisterController implements Initializable {
 
     @FXML
     private void emailKeyPressed(KeyEvent event) {
-        if (KeyCode.ENTER == event.getCode()) {
+        if (KeyCode.ENTER == event.getCode()) {//Enter key pressed
             if (!email.getText().equals("")) {
                 npass.requestFocus();
-            } else{
+            } else {
                 emailAlert.setTextFill(Color.RED);
                 emailAlert.setText("*Email cannot be empty!");
             }
@@ -224,7 +230,7 @@ public class RegisterController implements Initializable {
 
     @FXML
     private void newpassKeyPressed(KeyEvent event) {
-        if (KeyCode.ENTER == event.getCode()) {
+        if (KeyCode.ENTER == event.getCode()) {//Enter key pressed
             if (!npass.getText().equals("")) {
                 cpass.requestFocus();
             } else {
@@ -236,7 +242,7 @@ public class RegisterController implements Initializable {
 
     @FXML
     private void conpassKeyPressed(KeyEvent event) {
-        if (KeyCode.ENTER == event.getCode()) {
+        if (KeyCode.ENTER == event.getCode()) {//Enter key pressed
             if (!cpass.getText().equals("")) {
                 confirm.fire();
             } else {
