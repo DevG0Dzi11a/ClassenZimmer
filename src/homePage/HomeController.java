@@ -1,4 +1,3 @@
-
 package homePage;
 
 import java.net.URL;
@@ -6,9 +5,12 @@ import java.util.ResourceBundle;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
@@ -30,13 +32,17 @@ public class HomeController implements Initializable {
     private ImageView Menuback;
     @FXML
     private ImageView Profileslideback;
+    @FXML
+    private ImageView Add;
+    @FXML
+    private AnchorPane Class;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       slider.setTranslateX(-298);
+        slider.setTranslateX(-298);
         Menu.setOnMouseClicked((MouseEvent event) -> {
             TranslateTransition slide = new TranslateTransition();
             slide.setDuration(Duration.seconds(0.4));
@@ -71,7 +77,7 @@ public class HomeController implements Initializable {
 
         });
         //profile slide
-        
+
         slider1.setTranslateY(-326);
         Profileslide.setOnMouseClicked((MouseEvent event) -> {
             TranslateTransition slide1 = new TranslateTransition();
@@ -106,7 +112,19 @@ public class HomeController implements Initializable {
             });
 
         });
-       
-    }    
-    
+
+        // Add Class
+        Add.setOnMouseClicked((MouseEvent event) -> {
+            AnchorPane insert = new AnchorPane(Class);
+            
+            Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+           // Scene = new Scene(FXMLLoader.load(getClass().getResource("addClass.fxml")), 640, 480);
+            //primaryStage.setScene(scene);
+           // primaryStage.show();
+            
+
+        });
+
+    }
+
 }
