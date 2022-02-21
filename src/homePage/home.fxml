@@ -5,11 +5,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homePage.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homePage.HomeController">
    <children>
       <AnchorPane fx:id="slider" layoutY="74.0" prefHeight="629.0" prefWidth="298.0" style="-fx-background-color: #0A1D8E; -fx-background-radius: 0px 30px 30px 0px;" AnchorPane.leftAnchor="0.0">
          <children>
@@ -131,11 +130,6 @@
                   <Image url="@../image/Add%20Icon.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="31.0" layoutX="1037.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/Notification%20Icon.png" />
-               </image>
-            </ImageView>
             <ImageView fx:id="Profileslideback" fitHeight="39.0" fitWidth="39.0" layoutX="1130.8947296142578" layoutY="22.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="22.0">
                <image>
                   <Image url="@../image/User%20Icon.png" />
@@ -144,6 +138,16 @@
             <ImageView fx:id="Profileslide" fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="22.0">
                <image>
                   <Image url="@../image/User%20Icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="notifslideback" fitHeight="35.0" fitWidth="31.0" layoutX="1047.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1047.0" AnchorPane.rightAnchor="122.14473724365234" AnchorPane.topAnchor="25.0">
+               <image>
+                  <Image url="@../image/Notification%20Icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="notifslide" fitHeight="35.0" fitWidth="31.0" layoutX="1037.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1047.0" AnchorPane.rightAnchor="122.14473724365234" AnchorPane.topAnchor="25.0">
+               <image>
+                  <Image url="@../image/Notification%20Icon.png" />
                </image>
             </ImageView>
          </children>
@@ -216,6 +220,6 @@
             </VBox>
          </children>
       </AnchorPane>
-      <BorderPane fx:id="borderpan" layoutX="-2.0" layoutY="78.0" prefHeight="620.0" prefWidth="1206.0" />
+      <AnchorPane fx:id="slider2" layoutX="910.0" layoutY="76.0" prefHeight="400.0" prefWidth="290.0" style="-fx-background-color: blue; -fx-background-radius: 0px 0px 25px 25px;" />
    </children>
 </AnchorPane>
