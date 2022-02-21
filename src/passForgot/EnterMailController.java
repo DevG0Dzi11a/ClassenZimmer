@@ -9,11 +9,13 @@ import com.email.durgesh.Email;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -62,6 +64,25 @@ public class EnterMailController implements Initializable {
         // TODO
     }
 
+    public String OTPGenerator() {
+        int n = 10;
+        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                + "0123456789"
+                + "abcdefghijklmnopqrstuvxyz";
+
+        StringBuilder sb = new StringBuilder(n);
+
+        for (int i = 0; i < n; i++) {
+            int index
+                    = (int) (AlphaNumericString.length()
+                    * Math.random());
+            sb.append(AlphaNumericString
+                    .charAt(index));
+        }
+
+        return sb.toString();
+    }
+
     @FXML
     private void resetAction(ActionEvent event) throws MessagingException, UnsupportedEncodingException, SQLException, ClassNotFoundException, IOException {
 
@@ -72,13 +93,18 @@ public class EnterMailController implements Initializable {
         String esql = "select * from login_info where email ='" + emailCheck + "'";// check if the email is rregistered
         ResultSet ers = estm.executeQuery(esql);
         if (ers.next()) {//registered
-            String otp = "12345";
+            String otp = OTPGenerator();
+            System.out.println(otp);
             Email sendMail = new Email("pubgbanc@gmail.com", "mshossain");
             sendMail.setFrom("pubgbanc@gmail.com", "ClassenZimmer");
             sendMail.setSubject("ClassenZimmer-Password Reset");
             sendMail.setText("This is your OTP. Use this to reset Password" + "\n" + "OTP: " + otp);
             sendMail.addRecipient(emailCheck);
             sendMail.send();
+            String sql = "UPDATE login_info SET password = '', otp = '"+otp+"'"+" WHERE email = '"+emailCheck+"';";
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(sql);
+            connection.close();
             Notifications.create()//push notification
                     .title("Email Sent")
                     .text("Email has successfully been sent")

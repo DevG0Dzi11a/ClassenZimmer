@@ -116,7 +116,7 @@ public class RegisterController implements Initializable {
             } else {
                 unameAlert.setText("");
                 username = uname.getText();
-                if (!email.getText().contains("@") && !email.getText().contains(".com")) {//checking valid email address
+                if ((!email.getText().contains("@")) || (!email.getText().contains(".com"))) {//checking valid email address
                     emailAlert.setTextFill(Color.RED);
                     emailAlert.setText("*Enter a valid email address");
                 } else {
@@ -134,8 +134,8 @@ public class RegisterController implements Initializable {
                         if (npass.getText().equals(cpass.getText())) {// inserting the values in DB
                             String pwd = MD5(npass.getText());
                             String des = user;
-                            String insert1 = "INSERT INTO login_info(username, email, password, des) VALUES('";
-                            String insert2 = username + "','" + mail + "','" + pwd + "','" + des + "')";
+                            String insert1 = "INSERT INTO login_info(username, email, password, des, otp) VALUES('";
+                            String insert2 = username + "','" + mail + "','" + pwd + "','" + des + "','" +""+"')";
                             String sql = insert1 + insert2;
                             Notifications.create()//push notification
                                     .title("Congratulations!")
