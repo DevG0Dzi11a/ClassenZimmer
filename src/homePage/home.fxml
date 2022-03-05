@@ -6,13 +6,11 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homePage.HomeController">
    <children>
-      <FlowPane layoutX="-2.0" layoutY="75.0" prefHeight="630.0" prefWidth="1206.0" />
       <AnchorPane fx:id="slider" layoutY="74.0" prefHeight="629.0" prefWidth="298.0" style="-fx-background-color: #0A1D8E; -fx-background-radius: 0px 30px 30px 0px;" AnchorPane.leftAnchor="0.0">
          <children>
             <VBox layoutX="-4.0" layoutY="3.0" prefHeight="577.0" prefWidth="268.0" AnchorPane.topAnchor="3.0">
@@ -160,7 +158,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="31.0" layoutX="1037.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="notislideback" fitHeight="35.0" fitWidth="31.0" layoutX="1037.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="25.0">
                <image>
                   <Image url="@../image/Notification%20Icon.png" />
                </image>
@@ -179,6 +177,14 @@
             <ImageView fx:id="Profileslide" fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="22.0">
                <image>
                   <Image url="@../image/User%20Icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="notislide" fitHeight="35.0" fitWidth="31.0" layoutX="1047.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="25.0">
+               <image>
+                  <Image url="@../image/Notification%20Icon.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -266,5 +272,6 @@
             </VBox>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="slider2" layoutX="917.0" layoutY="74.0" prefHeight="390.0" prefWidth="287.0" style="-fx-background-color: navy blue; -fx-background-radius: 0px 0px 25px 25px;" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>

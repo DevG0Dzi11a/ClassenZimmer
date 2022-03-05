@@ -31,6 +31,10 @@ public class HomeController implements Initializable {
     private AnchorPane slider;
     @FXML
     private AnchorPane slider1;
+    
+    @FXML
+    private AnchorPane slider2;
+
     @FXML
     private ImageView Menu;
     @FXML
@@ -41,6 +45,13 @@ public class HomeController implements Initializable {
     private ImageView Profileslideback;
     @FXML
     private ImageView Add;
+    
+    @FXML
+    private ImageView notislide;
+
+    @FXML
+    private ImageView notislideback;
+
     @FXML
     private Button logoutbtn;
     
@@ -93,7 +104,9 @@ public class HomeController implements Initializable {
 
             slide1.setToY(0);
             slide1.play();
-
+            slider2.setTranslateY(-466);
+               notislide.setVisible(true);
+                notislideback.setVisible(false);
             slider1.setTranslateY(-326);
 
             slide1.setOnFinished(e -> {
@@ -116,6 +129,43 @@ public class HomeController implements Initializable {
             slide1.setOnFinished(e -> {
                 Profileslide.setVisible(true);
                 Profileslideback.setVisible(false);
+            });
+
+        });
+         slider2.setTranslateY(-466);
+        notislide.setOnMouseClicked((MouseEvent event) -> {
+            TranslateTransition slide2 = new TranslateTransition();
+            slide2.setDuration(Duration.seconds(0.4));
+            slide2.setNode(slider2);
+
+            slide2.setToY(0);
+            slide2.play();
+            slider1.setTranslateY(-326);
+            Profileslide.setVisible(true);
+            Profileslideback.setVisible(false);
+
+            slider2.setTranslateY(-466);
+
+            slide2.setOnFinished(e -> {
+                notislide.setVisible(false);
+                notislideback.setVisible(true);
+
+            });
+
+        });
+        notislideback.setOnMouseClicked((MouseEvent event) -> {
+            TranslateTransition slide2 = new TranslateTransition();
+            slide2.setDuration(Duration.seconds(0.4));
+            slide2.setNode(slider2);
+
+            slide2.setToY(-466);
+            slide2.play();
+
+            slider2.setTranslateY(0);
+
+            slide2.setOnFinished(e -> {
+                notislide.setVisible(true);
+                notislideback.setVisible(false);
             });
 
         });

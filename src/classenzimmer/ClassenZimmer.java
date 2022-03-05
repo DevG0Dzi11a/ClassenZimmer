@@ -17,7 +17,7 @@ public class ClassenZimmer extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/login/logIn.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/frontpage/frontpage.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setTitle("ClassenZimmer");
         primaryStage.setScene(scene);
