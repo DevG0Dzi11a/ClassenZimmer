@@ -14,11 +14,11 @@
          <children>
             <VBox layoutX="-4.0" layoutY="3.0" prefHeight="577.0" prefWidth="268.0" AnchorPane.topAnchor="3.0">
                <children>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" text="  Home" textFill="WHITE">
+                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" text="  Courses" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
                            <image>
-                              <Image url="@../image/Home%20Button.png" />
+                              <Image url="@../image/Course%20Icon.png" />
                            </image>
                         </ImageView>
                      </graphic>
