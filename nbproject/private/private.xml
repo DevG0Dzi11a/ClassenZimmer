@@ -5,6 +5,8 @@
         <group>
             <file>file:/G:/AUST%202.1/SD%20Lab/ClassenZimmer/src/homePage/addClass.fxml</file>
             <file>file:/G:/AUST%202.1/SD%20Lab/ClassenZimmer/src/login/LogInController.java</file>
+            <file>file:/G:/AUST%202.1/SD%20Lab/ClassenZimmer/src/help/HelpController.java</file>
+            <file>file:/G:/AUST%202.1/SD%20Lab/ClassenZimmer/src/help/help.fxml</file>
             <file>file:/G:/AUST%202.1/SD%20Lab/ClassenZimmer/src/classenzimmer/ClassenZimmer.java</file>
             <file>file:/G:/AUST%202.1/SD%20Lab/ClassenZimmer/src/stylesheets/textfield_style.css</file>
             <file>file:/G:/AUST%202.1/SD%20Lab/ClassenZimmer/src/stylesheets/login_style.css</file>

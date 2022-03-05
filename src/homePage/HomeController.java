@@ -47,12 +47,16 @@ public class HomeController implements Initializable {
     private ImageView notifslide;
     @FXML
     private ImageView notifslideback;
+    @FXML
+    private Button helpbtn;
+    @FXML
+    private Button settingsbtn;
 
-    
+    @FXML
+    private AnchorPane ChangeScreen;
     @FXML
     private AnchorPane slider2;
 
-    
     /**
      * Initializes the controller class.
      */
@@ -103,11 +107,10 @@ public class HomeController implements Initializable {
             slide1.setToY(0);
             slide1.play();
             slider2.setTranslateY(-476);
-           notifslide.setVisible(true);
-           notifslideback.setVisible(false);
+            notifslide.setVisible(true);
+            notifslideback.setVisible(false);
 
             slider1.setTranslateY(-326);
-            
 
             slide1.setOnFinished(e -> {
                 Profileslide.setVisible(false);
@@ -170,12 +173,11 @@ public class HomeController implements Initializable {
 
         });
 
-
         // Add Class
         Add.setOnMouseClicked((MouseEvent event) -> {
             AnchorPane insert = new AnchorPane();
-            
-            Scene scene=null;
+
+            Scene scene = null;
             try {
                 scene = new Scene(FXMLLoader.load(getClass().getResource("addClass.fxml")));
             } catch (IOException ex) {
@@ -184,12 +186,11 @@ public class HomeController implements Initializable {
             Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             primaryStage.setScene(scene);
             primaryStage.show();
-            
 
         });
-        
 
     }
+
     @FXML
     void logOutAction(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/login/logIn.fxml"));
@@ -199,4 +200,53 @@ public class HomeController implements Initializable {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+    int flag = 1;
+
+    @FXML
+    void helpAction(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/help/help.fxml"));
+        AnchorPane view = loader.load();
+        if (flag == 1) {
+            ChangeScreen.getChildren().add(view);
+            TranslateTransition slide = new TranslateTransition();
+            slide.setDuration(Duration.seconds(0.4));
+            slide.setNode(slider);
+
+            slide.setToX(-298);
+            slide.play();
+
+            slider.setTranslateX(0);
+            Menu.setVisible(true);
+            
+        }
+        slider.toFront();
+        slider1.toFront();
+        slider2.toFront();
+
+    }
+
+    @FXML
+    void settingsAction(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/settings/settings.fxml"));
+        AnchorPane view = loader.load();
+        if (flag == 1) {
+            ChangeScreen.getChildren().add(view);
+            TranslateTransition slide = new TranslateTransition();
+            slide.setDuration(Duration.seconds(0.4));
+            slide.setNode(slider);
+
+            slide.setToX(-298);
+            slide.play();
+
+            slider.setTranslateX(0);
+            Menu.setVisible(true);
+        }
+        slider.toFront();
+        slider1.toFront();
+        slider2.toFront();
+
+    }
+
 }
