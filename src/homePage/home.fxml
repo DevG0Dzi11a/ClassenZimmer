@@ -11,120 +11,205 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homePage.HomeController">
    <children>
-      <AnchorPane fx:id="slider" layoutY="74.0" prefHeight="629.0" prefWidth="298.0" style="-fx-background-color: #0A1D8E; -fx-background-radius: 0px 30px 30px 0px;" AnchorPane.leftAnchor="0.0">
+      <AnchorPane fx:id="ChangeScreen" layoutY="76.0" prefHeight="628.0" prefWidth="1202.0">
          <children>
-            <VBox layoutX="-4.0" layoutY="3.0" prefHeight="577.0" prefWidth="268.0" AnchorPane.topAnchor="3.0">
+            <AnchorPane fx:id="slider" prefHeight="629.0" prefWidth="298.0" style="-fx-background-color: #0A1D8E; -fx-background-radius: 0px 30px 30px 0px;" AnchorPane.leftAnchor="0.0">
                <children>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Home" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@../image/Home%20Button.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Bodoni MT Bold" size="25.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="40.0" top="35.0" />
-                     </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button alignment="TOP_LEFT" layoutX="50.0" layoutY="385.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="214.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Classroutine" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@../image/Classroom%20Icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Bodoni MT Bold" size="25.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="40.0" top="35.0" />
-                     </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Calender" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@../image/Calender%20Icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Bodoni MT Bold" size="25.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="40.0" top="35.0" />
-                     </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  To-Do" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@../image/To-do%20Icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Bodoni MT Bold" size="25.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="40.0" top="35.0" />
-                     </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Settings" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@../image/Settings%20Icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Bodoni MT Bold" size="25.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="40.0" top="35.0" />
-                     </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Help" textFill="WHITE">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@../image/Help%20Icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Bodoni MT Bold" size="25.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="40.0" top="35.0" />
-                     </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
+                  <VBox layoutX="-4.0" layoutY="3.0" prefHeight="577.0" prefWidth="268.0" AnchorPane.topAnchor="3.0">
+                     <children>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Courses" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../image/Course%20Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Bodoni MT Bold" size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" top="35.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="TOP_LEFT" layoutX="50.0" layoutY="385.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="214.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Classroutine" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../image/Classroom%20Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Bodoni MT Bold" size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" top="35.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Calender" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../image/Calender%20Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Bodoni MT Bold" size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" top="35.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  To-Do" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../image/To-do%20Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Bodoni MT Bold" size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" top="35.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="settingsbtn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#settingsAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Settings" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../image/Settings%20Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Bodoni MT Bold" size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" top="35.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="helpbtn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#helpAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Help" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../image/Help%20Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Bodoni MT Bold" size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" top="35.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
                </children>
-            </VBox>
+            </AnchorPane>
+            <AnchorPane fx:id="slider1" layoutX="1079.0" layoutY="-6.0" prefHeight="250.0" prefWidth="90.0" style="-fx-background-color: #fa5a0a; -fx-background-radius: 0px 0px 20px 20px;" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="-6.0">
+               <children>
+                  <VBox layoutX="3.0" prefHeight="220.0" prefWidth="118.0" style="-fx-background-radius: 0px 0px 20px 20px;">
+                     <children>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="My Profile" textFill="#f5f5f5">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/User%20Icon_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Bodoni MT Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" top="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="Reuslt" textFill="#f5f5f5">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/Result%20Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Bodoni MT Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" top="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="My Profile" textFill="#f5f5f5">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/User%20Icon_1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Bodoni MT Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" top="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="logoutbtn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#logOutAction" prefHeight="80.0" prefWidth="121.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="Logout" textFill="#f5f5f5">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/Exit%20Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Bodoni MT Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" top="15.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="slider2" layoutX="910.0" layoutY="-6.0" prefHeight="400.0" prefWidth="290.0" style="-fx-background-color: blue; -fx-background-radius: 0px 0px 25px 25px;" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="76.0" prefWidth="1200.0" style="-fx-background-color: #0A1D8E;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -150,17 +235,9 @@
                   <Image url="@../image/Logo.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="Add" fitHeight="31.0" fitWidth="30.0" layoutX="966.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="Add" accessibleRole="BUTTON" fitHeight="31.0" fitWidth="30.0" layoutX="966.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/Add%20Icon.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <ImageView fx:id="notislideback" fitHeight="35.0" fitWidth="31.0" layoutX="1037.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="25.0">
-               <image>
-                  <Image url="@../image/Notification%20Icon.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -182,7 +259,15 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fx:id="notislide" fitHeight="35.0" fitWidth="31.0" layoutX="1047.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="25.0">
+            <ImageView fx:id="notifslideback" fitHeight="35.0" fitWidth="31.0" layoutX="1047.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1047.0" AnchorPane.rightAnchor="122.14473724365234" AnchorPane.topAnchor="25.0">
+               <image>
+                  <Image url="@../image/Notification%20Icon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="notifslide" fitHeight="35.0" fitWidth="31.0" layoutX="1037.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1047.0" AnchorPane.rightAnchor="122.14473724365234" AnchorPane.topAnchor="25.0">
                <image>
                   <Image url="@../image/Notification%20Icon.png" />
                </image>
@@ -192,86 +277,5 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="slider1" layoutX="1079.0" layoutY="76.0" prefHeight="250.0" prefWidth="90.0" style="-fx-background-color: #fa5a0a; -fx-background-radius: 0px 0px 20px 20px;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0">
-         <children>
-            <VBox layoutX="3.0" prefHeight="220.0" prefWidth="118.0" style="-fx-background-radius: 0px 0px 20px 20px;">
-               <children>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="My Profile" textFill="#f5f5f5">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../image/User%20Icon_1.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Bodoni MT Bold" size="14.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" top="15.0" />
-                     </padding>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="Reuslt" textFill="#f5f5f5">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../image/Result%20Icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Bodoni MT Bold" size="14.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" top="15.0" />
-                     </padding>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="My Profile" textFill="#f5f5f5">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../image/User%20Icon_1.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Bodoni MT Bold" size="14.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" top="15.0" />
-                     </padding>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-                  <Button fx:id="logoutbtn" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#logOutAction" prefHeight="80.0" prefWidth="121.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="Logout" textFill="#f5f5f5">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../image/Exit%20Icon.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font name="Bodoni MT Bold" size="14.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="10.0" left="20.0" top="15.0" />
-                     </padding>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-               </children>
-            </VBox>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="slider2" layoutX="917.0" layoutY="74.0" prefHeight="390.0" prefWidth="287.0" style="-fx-background-color: navy blue; -fx-background-radius: 0px 0px 25px 25px;" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>
