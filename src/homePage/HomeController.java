@@ -198,4 +198,50 @@ public class HomeController implements Initializable {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+        @FXML
+    void helpAction(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/help/help.fxml"));
+        AnchorPane view = loader.load();
+        if (flag == 1) {
+            ChangeScreen.getChildren().add(view);
+            TranslateTransition slide = new TranslateTransition();
+            slide.setDuration(Duration.seconds(0.4));
+            slide.setNode(slider);
+
+            slide.setToX(-298);
+            slide.play();
+
+            slider.setTranslateX(0);
+            Menu.setVisible(true);
+            
+        }
+        slider.toFront();
+        slider1.toFront();
+        slider2.toFront();
+
+    }
+
+    @FXML
+    void settingsAction(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/settings/settings.fxml"));
+        AnchorPane view = loader.load();
+        if (flag == 1) {
+            ChangeScreen.getChildren().add(view);
+            TranslateTransition slide = new TranslateTransition();
+            slide.setDuration(Duration.seconds(0.4));
+            slide.setNode(slider);
+
+            slide.setToX(-298);
+            slide.play();
+
+            slider.setTranslateX(0);
+            Menu.setVisible(true);
+        }
+        slider.toFront();
+        slider1.toFront();
+        slider2.toFront();
+
+    }
 }
