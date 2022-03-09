@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="newclass" prefHeight="250.0" prefWidth="300.0" style="-fx-background-radius: 30; -fx-background-color: orange; -fx-border-radius: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homePage.AddClassController">
+<AnchorPane id="AnchorPane" fx:id="newclass" prefHeight="213.0" prefWidth="294.0" style="-fx-background-radius: 30; -fx-background-color: orange; -fx-border-radius: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homePage.AddClassController">
    <children>
-      <ScrollPane layoutX="18.0" layoutY="85.0" prefHeight="143.0" prefWidth="264.0">
-         <content>
-            <TableView fx:id="table" prefHeight="200.0" prefWidth="253.0">
-              <columns>
-                <TableColumn fx:id="taskColumn" prefWidth="120.80005151033401" text="Task" />
-                <TableColumn fx:id="dueDateColumn" prefWidth="130.4000244140625" text="Due Date" />
-              </columns>
-            </TableView>
-         </content>
-      </ScrollPane>
       <Label fx:id="courseName" layoutX="25.0" layoutY="14.0" prefHeight="37.0" prefWidth="242.0" text="Course Name" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Bodoni MT" size="23.0" />
          </font>
       </Label>
-      <Label fx:id="assignedBy" layoutX="25.0" layoutY="52.0" prefHeight="27.0" prefWidth="182.0" text="Assigned by" AnchorPane.leftAnchor="25.0">
+      <Label fx:id="assignedBy" layoutX="25.0" layoutY="52.0" prefHeight="162.0" prefWidth="242.0" text="Assigned by" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Bodoni MT" size="14.0" />
          </font>

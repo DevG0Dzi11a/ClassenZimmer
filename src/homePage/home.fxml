@@ -17,7 +17,7 @@
                <children>
                   <VBox layoutX="-4.0" layoutY="3.0" prefHeight="577.0" prefWidth="268.0" AnchorPane.topAnchor="3.0">
                      <children>
-                        <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Courses" textFill="WHITE">
+                        <Button fx:id="courses" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#courseAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Courses" textFill="WHITE">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
                                  <image>

@@ -17,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -56,12 +57,15 @@ public class HomeController implements Initializable {
     private AnchorPane ChangeScreen;
     @FXML
     private AnchorPane slider2;
+    @FXML
+    private Button courses;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        courses.fire();
         slider.setTranslateX(-298);
         Menu.setOnMouseClicked((MouseEvent event) -> {
             TranslateTransition slide = new TranslateTransition();
@@ -175,17 +179,6 @@ public class HomeController implements Initializable {
 
         // Add Class
         Add.setOnMouseClicked((MouseEvent event) -> {
-            AnchorPane insert = new AnchorPane();
-
-            Scene scene = null;
-            try {
-                scene = new Scene(FXMLLoader.load(getClass().getResource("addClass.fxml")));
-            } catch (IOException ex) {
-                Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            primaryStage.setScene(scene);
-            primaryStage.show();
 
         });
 
@@ -224,6 +217,26 @@ public class HomeController implements Initializable {
         slider1.toFront();
         slider2.toFront();
 
+    }
+    @FXML
+    void courseAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/courses/courses.fxml"));
+        HBox view = loader.load();
+       
+            ChangeScreen.getChildren().add(view);
+            TranslateTransition slide = new TranslateTransition();
+            slide.setDuration(Duration.seconds(0.4));
+            slide.setNode(slider);
+
+            slide.setToX(-298);
+            slide.play();
+
+            slider.setTranslateX(0);
+            Menu.setVisible(true);
+       
+        slider.toFront();
+        slider1.toFront();
+        slider2.toFront();
     }
 
     @FXML

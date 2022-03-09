@@ -34,6 +34,32 @@ public class AddClassController implements Initializable {
     @FXML
     private Label assignedBy;
 
+    public String getCourseName() {
+        return courseName.getText();
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName.setText(courseName);
+    }
+
+    public String getAssignedBy() {
+        return assignedBy.getText();
+    }
+
+    public void setAssignedBy(String assignedBy) {
+        this.assignedBy.setText(assignedBy);
+    }
+
+    public String getClasscode() {
+        return classcode;
+    }
+
+    public void setClasscode(String classcode) {
+        this.classcode = classcode;
+    }
+    
+    private String classcode;
+
     /**
      * Initializes the controller class.
      */
