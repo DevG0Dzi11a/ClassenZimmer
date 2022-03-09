@@ -3,8 +3,6 @@ package homePage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,7 +25,11 @@ import javafx.util.Duration;
  * @author Shawon
  */
 public class HomeController implements Initializable {
+    @FXML
+    private Button routine;
 
+    @FXML
+    private Button todo;
     @FXML
     private AnchorPane slider;
     @FXML
@@ -45,18 +47,13 @@ public class HomeController implements Initializable {
     @FXML
     private Button logoutbtn;
     @FXML
-    private ImageView notifslide;
-    @FXML
-    private ImageView notifslideback;
-    @FXML
     private Button helpbtn;
     @FXML
     private Button settingsbtn;
-
+    @FXML
+    private Button calender;
     @FXML
     private AnchorPane ChangeScreen;
-    @FXML
-    private AnchorPane slider2;
     @FXML
     private Button courses;
 
@@ -110,9 +107,6 @@ public class HomeController implements Initializable {
 
             slide1.setToY(0);
             slide1.play();
-            slider2.setTranslateY(-476);
-            notifslide.setVisible(true);
-            notifslideback.setVisible(false);
 
             slider1.setTranslateY(-326);
 
@@ -136,43 +130,6 @@ public class HomeController implements Initializable {
             slide1.setOnFinished(e -> {
                 Profileslide.setVisible(true);
                 Profileslideback.setVisible(false);
-            });
-
-        });
-        slider2.setTranslateY(-476);
-        notifslide.setOnMouseClicked((MouseEvent event) -> {
-            TranslateTransition slide2 = new TranslateTransition();
-            slide2.setDuration(Duration.seconds(0.4));
-            slide2.setNode(slider2);
-
-            slide2.setToY(0);
-            slide2.play();
-            slider1.setTranslateY(-326);
-
-            slider2.setTranslateY(-476);
-            Profileslide.setVisible(true);
-            Profileslideback.setVisible(false);
-
-            slide2.setOnFinished(e -> {
-                notifslide.setVisible(false);
-                notifslideback.setVisible(true);
-
-            });
-
-        });
-        notifslideback.setOnMouseClicked((MouseEvent event) -> {
-            TranslateTransition slide2 = new TranslateTransition();
-            slide2.setDuration(Duration.seconds(0.4));
-            slide2.setNode(slider2);
-
-            slide2.setToY(-476);
-            slide2.play();
-
-            slider2.setTranslateY(0);
-
-            slide2.setOnFinished(e -> {
-                notifslide.setVisible(true);
-                notifslideback.setVisible(false);
             });
 
         });
@@ -200,43 +157,41 @@ public class HomeController implements Initializable {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/help/help.fxml"));
         AnchorPane view = loader.load();
-       
-            ChangeScreen.getChildren().add(view);
-            TranslateTransition slide = new TranslateTransition();
-            slide.setDuration(Duration.seconds(0.4));
-            slide.setNode(slider);
 
-            slide.setToX(-298);
-            slide.play();
+        ChangeScreen.getChildren().add(view);
+        TranslateTransition slide = new TranslateTransition();
+        slide.setDuration(Duration.seconds(0.4));
+        slide.setNode(slider);
 
-            slider.setTranslateX(0);
-            Menu.setVisible(true);
-            
-        
+        slide.setToX(-298);
+        slide.play();
+
+        slider.setTranslateX(0);
+        Menu.setVisible(true);
+
         slider.toFront();
         slider1.toFront();
-        slider2.toFront();
 
     }
+
     @FXML
     void courseAction(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/courses/courses.fxml"));
         HBox view = loader.load();
-       
-            ChangeScreen.getChildren().add(view);
-            TranslateTransition slide = new TranslateTransition();
-            slide.setDuration(Duration.seconds(0.4));
-            slide.setNode(slider);
 
-            slide.setToX(-298);
-            slide.play();
+        ChangeScreen.getChildren().add(view);
+        TranslateTransition slide = new TranslateTransition();
+        slide.setDuration(Duration.seconds(0.4));
+        slide.setNode(slider);
 
-            slider.setTranslateX(0);
-            Menu.setVisible(true);
-       
+        slide.setToX(-298);
+        slide.play();
+
+        slider.setTranslateX(0);
+        Menu.setVisible(true);
+
         slider.toFront();
         slider1.toFront();
-        slider2.toFront();
     }
 
     @FXML
@@ -244,22 +199,80 @@ public class HomeController implements Initializable {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/settings/settings.fxml"));
         AnchorPane view = loader.load();
-       
-            ChangeScreen.getChildren().add(view);
-            TranslateTransition slide = new TranslateTransition();
-            slide.setDuration(Duration.seconds(0.4));
-            slide.setNode(slider);
 
-            slide.setToX(-298);
-            slide.play();
+        ChangeScreen.getChildren().add(view);
+        TranslateTransition slide = new TranslateTransition();
+        slide.setDuration(Duration.seconds(0.4));
+        slide.setNode(slider);
 
-            slider.setTranslateX(0);
-            Menu.setVisible(true);
-       
+        slide.setToX(-298);
+        slide.play();
+
+        slider.setTranslateX(0);
+        Menu.setVisible(true);
+
         slider.toFront();
         slider1.toFront();
-        slider2.toFront();
 
+    }
+
+    @FXML
+    void calenderAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/calender/calender.fxml"));
+        AnchorPane view = loader.load();
+
+        ChangeScreen.getChildren().add(view);
+        TranslateTransition slide = new TranslateTransition();
+        slide.setDuration(Duration.seconds(0.4));
+        slide.setNode(slider);
+
+        slide.setToX(-298);
+        slide.play();
+
+        slider.setTranslateX(0);
+        Menu.setVisible(true);
+
+        slider.toFront();
+        slider1.toFront();
+    }
+    @FXML
+    void todoAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/todo/todo.fxml"));
+        AnchorPane view = loader.load();
+
+        ChangeScreen.getChildren().add(view);
+        TranslateTransition slide = new TranslateTransition();
+        slide.setDuration(Duration.seconds(0.4));
+        slide.setNode(slider);
+
+        slide.setToX(-298);
+        slide.play();
+
+        slider.setTranslateX(0);
+        Menu.setVisible(true);
+
+        slider.toFront();
+        slider1.toFront();
+    }
+    
+     @FXML
+    void routineAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/classroutine/classroutine.fxml"));
+        AnchorPane view = loader.load();
+
+        ChangeScreen.getChildren().add(view);
+        TranslateTransition slide = new TranslateTransition();
+        slide.setDuration(Duration.seconds(0.4));
+        slide.setNode(slider);
+
+        slide.setToX(-298);
+        slide.play();
+
+        slider.setTranslateX(0);
+        Menu.setVisible(true);
+
+        slider.toFront();
+        slider1.toFront();
     }
 
 }

@@ -3,35 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package help;
+package calender;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.image.ImageView;
 
 /**
  * FXML Controller class
  *
- * @author Shawon
+ * @author Sabbir
  */
-public class HelpController implements Initializable {
-
-    @FXML
-    private ImageView Menuback;
-    @FXML
-    private ImageView Menu;
-    @FXML
-    private ImageView Add;
-    @FXML
-    private ImageView Profileslideback;
-    @FXML
-    private ImageView Profileslide;
-    @FXML
-    private ImageView notifslideback;
-    @FXML
-    private ImageView notifslide;
+public class CalenderController implements Initializable {
 
     /**
      * Initializes the controller class.

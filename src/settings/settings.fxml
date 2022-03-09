@@ -1,10 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="1200.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="settings.SettingsController">
    <children>
-      <AnchorPane layoutX="76.0" layoutY="44.0" prefHeight="514.0" prefWidth="992.0" style="-fx-background-color: blue;" />
+      <ImageView fitHeight="624.0" fitWidth="1200.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/bg.jpg" />
+         </image>
+      </ImageView>
+      <RadioButton layoutX="165.0" layoutY="127.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="117.0" text="Light " textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font></RadioButton>
+      <RadioButton layoutX="311.0" layoutY="126.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="117.0" text="Dark" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="63.0" layoutY="77.0" prefHeight="39.0" prefWidth="186.0" text="Theme:" textFill="WHITE" AnchorPane.leftAnchor="56.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="235.0" prefHeight="39.0" prefWidth="186.0" text="Notification:" textFill="WHITE" AnchorPane.leftAnchor="56.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="160.0" layoutY="307.0" prefHeight="38.0" prefWidth="378.0" text="Receive Email Notifications:" textFill="WHITE" AnchorPane.bottomAnchor="281.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="495.0" layoutY="313.0" mnemonicParsing="false" text="On" textFill="WHITE" AnchorPane.bottomAnchor="281.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="597.0" layoutY="313.0" mnemonicParsing="false" text="Off" textFill="WHITE" AnchorPane.bottomAnchor="281.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </RadioButton>
    </children>
 </AnchorPane>

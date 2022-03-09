@@ -13,11 +13,6 @@
    <children>
       <AnchorPane fx:id="ChangeScreen" layoutY="76.0" prefHeight="624.0" prefWidth="1202.0">
          <children>
-            <ImageView fitHeight="624.0" fitWidth="1200.0" layoutX="389.0" layoutY="55.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <image>
-                  <Image url="@../image/bg.jpg" />
-               </image>
-            </ImageView>
             <AnchorPane fx:id="slider" prefHeight="629.0" prefWidth="298.0" style="-fx-background-color: #0A1D8E; -fx-background-radius: 0px 30px 30px 0px;" AnchorPane.leftAnchor="0.0">
                <children>
                   <VBox layoutX="-4.0" layoutY="3.0" prefHeight="577.0" prefWidth="268.0" AnchorPane.topAnchor="3.0">
@@ -40,7 +35,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button alignment="TOP_LEFT" layoutX="50.0" layoutY="385.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="214.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Classroutine" textFill="WHITE">
+                        <Button fx:id="routine" alignment="TOP_LEFT" layoutX="50.0" layoutY="385.0" mnemonicParsing="false" onAction="#routineAction" prefHeight="50.0" prefWidth="214.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Classroutine" textFill="WHITE">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
                                  <image>
@@ -58,7 +53,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Calender" textFill="WHITE">
+                        <Button fx:id="calender" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#calenderAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  Calender" textFill="WHITE">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
                                  <image>
@@ -76,7 +71,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  To-Do" textFill="WHITE">
+                        <Button fx:id="todo" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#todoAction" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transperant;" stylesheets="@../stylesheets/home.css" text="  To-Do" textFill="WHITE">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
                                  <image>
@@ -214,7 +209,6 @@
                   </VBox>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="slider2" layoutX="910.0" layoutY="-6.0" prefHeight="400.0" prefWidth="290.0" style="-fx-background-color: blue; -fx-background-radius: 0px 0px 25px 25px;" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="76.0" prefWidth="1200.0" style="-fx-background-color: #0A1D8E;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -240,7 +234,7 @@
                   <Image url="@../image/Logo.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="Add" accessibleRole="BUTTON" fitHeight="31.0" fitWidth="30.0" layoutX="966.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="Add" accessibleRole="BUTTON" fitHeight="31.0" fitWidth="30.0" layoutX="1062.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../image/Add%20Icon.png" />
                </image>
@@ -259,22 +253,6 @@
             <ImageView fx:id="Profileslide" fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="22.0">
                <image>
                   <Image url="@../image/User%20Icon.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <ImageView fx:id="notifslideback" fitHeight="35.0" fitWidth="31.0" layoutX="1047.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1047.0" AnchorPane.rightAnchor="122.14473724365234" AnchorPane.topAnchor="25.0">
-               <image>
-                  <Image url="@../image/Notification%20Icon.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <ImageView fx:id="notifslide" fitHeight="35.0" fitWidth="31.0" layoutX="1037.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1047.0" AnchorPane.rightAnchor="122.14473724365234" AnchorPane.topAnchor="25.0">
-               <image>
-                  <Image url="@../image/Notification%20Icon.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />

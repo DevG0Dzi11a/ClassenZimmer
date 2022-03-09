@@ -1,38 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="help.HelpController">
    <children>
       <ImageView fitHeight="632.0" fitWidth="1200.0" pickOnBounds="true">
          <image>
             <Image url="@../image/bg.jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="85.0" layoutY="36.0" prefHeight="46.0" prefWidth="98.0" text="FAQ :">
-         <font>
-            <Font name="Bodoni MT Bold" size="24.0" />
-         </font>
-      </TextField>
       <ScrollPane layoutX="81.0" layoutY="94.0" prefHeight="234.0" prefWidth="1082.0">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="466.0" prefWidth="1080.0">
+               <children>
+                  <Label layoutX="-2.0" layoutY="55.0" prefHeight="49.0" prefWidth="1071.0" text="     =&gt; ClassenZimmer is a Institutional Software." textFill="#157200">
+                     <font>
+                        <Font name="Bodoni MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="9.0" prefHeight="49.0" prefWidth="1071.0" text="     1. What is ClassenZimmer?" textFill="RED">
+                     <font>
+                        <Font name="Bodoni MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1.0" layoutY="146.0" prefHeight="49.0" prefWidth="1071.0" text="     =&gt; ClassenZimmer is a University Software." textFill="#157200">
+                     <font>
+                        <Font name="Bodoni MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="3.0" layoutY="100.0" prefHeight="49.0" prefWidth="1071.0" text="     1. What is ClassenZimmer?" textFill="RED">
+                     <font>
+                        <Font name="Bodoni MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="239.0" prefHeight="49.0" prefWidth="1071.0" text="     =&gt; ClassenZimmer is a University Software." textFill="#157200">
+                     <font>
+                        <Font name="Bodoni MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="2.0" layoutY="193.0" prefHeight="49.0" prefWidth="1071.0" text="     1. What is ClassenZimmer?" textFill="RED">
+                     <font>
+                        <Font name="Bodoni MT Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
          </content>
       </ScrollPane>
-      <TextField layoutX="510.0" layoutY="359.0" prefHeight="48.0" prefWidth="158.0" text="Contact Info">
+      <Label layoutX="145.0" layoutY="504.0" prefHeight="53.0" prefWidth="235.0" text="+88016XXXXXXXX" textFill="WHITE" AnchorPane.leftAnchor="145.0">
          <font>
-            <Font name="Bodoni MT Bold" size="24.0" />
+            <Font name="Bodoni MT Bold" size="18.0" />
          </font>
-      </TextField>
-      <ScrollPane layoutX="155.0" layoutY="446.0" prefHeight="152.0" prefWidth="380.0">
-         <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-         </content>
-      </ScrollPane>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </Label>
+      <Label layoutX="145.0" layoutY="541.0" prefHeight="53.0" prefWidth="235.0" text="+88017XXXXXXXX" textFill="WHITE" AnchorPane.leftAnchor="145.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="18.0" />
+         </font>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </Label>
+      <Label layoutX="145.0" layoutY="464.0" prefHeight="53.0" prefWidth="235.0" text=" 02-XXXXXXXXX" textFill="WHITE" AnchorPane.leftAnchor="145.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="18.0" />
+         </font>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </Label>
+      <Label layoutX="145.0" layoutY="418.0" prefHeight="53.0" prefWidth="235.0" text="Phone :" textFill="#00ee10" AnchorPane.leftAnchor="145.0" AnchorPane.topAnchor="418.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="28.0" />
+         </font>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </Label>
+      <Label alignment="CENTER" layoutX="476.0" layoutY="378.0" prefHeight="53.0" prefWidth="235.0" style="-fx-background-color: white; -fx-background-radius: 15px 15px 15px 15px;" text="Contact Info :" textFill="#ed0000">
+         <font>
+            <Font name="Bodoni MT Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="83.0" layoutY="34.0" prefHeight="46.0" prefWidth="131.0" style="-fx-background-color: white; -fx-background-radius: 15px 15px 15px 15px;" text="FAQ:" textFill="#ed0000">
+         <font>
+            <Font name="Bodoni MT Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="885.0" layoutY="510.0" prefHeight="53.0" prefWidth="235.0" text="abc@yahoo.com" textFill="WHITE" AnchorPane.leftAnchor="888.0" AnchorPane.rightAnchor="75.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="22.0" />
+         </font>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </Label>
+      <Label layoutX="885.0" layoutY="547.0" prefHeight="53.0" prefWidth="235.0" text="fgh@hotmail.com" textFill="WHITE" AnchorPane.leftAnchor="888.0" AnchorPane.rightAnchor="75.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="22.0" />
+         </font>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </Label>
+      <Label layoutX="885.0" layoutY="470.0" prefHeight="53.0" prefWidth="235.0" text="xyz@gmail.com" textFill="WHITE" AnchorPane.leftAnchor="888.0" AnchorPane.rightAnchor="75.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="22.0" />
+         </font>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </Label>
+      <Label layoutX="888.0" layoutY="424.0" prefHeight="53.0" prefWidth="235.0" text="Email :" textFill="#00ee10" AnchorPane.leftAnchor="888.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="418.0">
+         <font>
+            <Font name="Bodoni MT Bold" size="28.0" />
+         </font>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </Label>
    </children>
 </AnchorPane>

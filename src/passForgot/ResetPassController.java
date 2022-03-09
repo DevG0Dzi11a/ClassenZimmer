@@ -40,6 +40,7 @@ public class ResetPassController implements Initializable {
 
     @FXML
     private void resetAction(ActionEvent event) {
+        
     }
 
     @FXML

@@ -63,7 +63,7 @@ public class CoursesController implements Initializable {
                 gridpane.setMaxHeight(Region.USE_PREF_SIZE);
                 gridpane.setPrefHeight(Region.USE_COMPUTED_SIZE);
                 gridpane.setMinHeight(Region.USE_COMPUTED_SIZE);
-                GridPane.setMargin(view, new Insets(50));
+                GridPane.setMargin(view, new Insets(30, 30, 0, 65));
             }
         } catch (IOException ex) {
             System.out.println(ex);
