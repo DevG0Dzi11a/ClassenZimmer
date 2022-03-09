@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" fx:id="newclass" prefHeight="250.0" prefWidth="300.0" style="-fx-background-radius: 30; -fx-background-color: orange; -fx-border-radius: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homePage.courses.CoursesController">
+<AnchorPane id="AnchorPane" fx:id="newclass" prefHeight="250.0" prefWidth="300.0" style="-fx-background-radius: 30; -fx-background-color: orange; -fx-border-radius: 30;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homePage.AddClassController">
    <children>
       <ScrollPane layoutX="18.0" layoutY="85.0" prefHeight="143.0" prefWidth="264.0">
          <content>

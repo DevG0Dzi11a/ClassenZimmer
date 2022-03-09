@@ -5,15 +5,21 @@
  */
 package homePage.courses;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
-import static javafx.application.ConditionalFeature.FXML;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 
 /**
  * FXML Controller class
@@ -22,46 +28,35 @@ import javafx.scene.layout.AnchorPane;
  */
 public class CoursesController implements Initializable {
 
+    private GridPane gridpane;
+    @FXML
+    private AnchorPane newclass;
+    @FXML
+    private TableView<?> table;
+    @FXML
+    private TableColumn<?, ?> taskColumn;
+    @FXML
+    private TableColumn<?, ?> dueDateColumn;
+    @FXML
+    private Label courseName;
     @FXML
     private Label assignedBy;
 
-    @FXML
-    private Label courseName;
-
-    @FXML
-    private TableColumn<?, ?> dueDateColumn;
-
-    @FXML
-    private AnchorPane newclass;
-
-    @FXML
-    private TableView<?> table;
-
-    @FXML
-    private TableColumn<?, ?> taskColumn;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        try {
+            // TODO
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/homePage/courses/courses.fxml"));
+            AnchorPane view = loader.load();
+
+            gridpane.add(view, 1, 1);
+        } catch (IOException ex) {
+            System.out.println(ex);
+        }
+
     }
 
-    public Label getAssignedBy() {
-        return assignedBy;
-    }
-
-    public void setAssignedBy(String value) {
-        this.assignedBy.setText(value);
-    }
-
-    public Label getCourseName() {
-        return courseName;
-    }
-
-    public void setCourseName(String value) {
-        this.courseName.setText(value);
-    }
-    
-    
 }

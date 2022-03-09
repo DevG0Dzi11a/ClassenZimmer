@@ -3,41 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package help;
+package homePage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
  *
- * @author Shawon
+ * @author Sabbir
  */
-public class HelpController implements Initializable {
+public class AddClassController implements Initializable {
 
     @FXML
-    private ImageView Menuback;
+    private AnchorPane newclass;
     @FXML
-    private ImageView Menu;
+    private TableView<?> table;
     @FXML
-    private ImageView Add;
+    private TableColumn<?, ?> taskColumn;
     @FXML
-    private ImageView Profileslideback;
+    private TableColumn<?, ?> dueDateColumn;
     @FXML
-    private ImageView Profileslide;
+    private Label courseName;
     @FXML
-    private ImageView notifslideback;
-    @FXML
-    private ImageView notifslide;
-    @FXML
-    private AnchorPane helpPane;
-
-    public HelpController() {
-    }
+    private Label assignedBy;
 
     /**
      * Initializes the controller class.
