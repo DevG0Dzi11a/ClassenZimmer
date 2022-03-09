@@ -11,8 +11,13 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="homePage.HomeController">
    <children>
-      <AnchorPane fx:id="ChangeScreen" layoutY="76.0" prefHeight="628.0" prefWidth="1202.0">
+      <AnchorPane fx:id="ChangeScreen" layoutY="76.0" prefHeight="624.0" prefWidth="1202.0">
          <children>
+            <ImageView fitHeight="624.0" fitWidth="1200.0" layoutX="389.0" layoutY="55.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../image/bg.jpg" />
+               </image>
+            </ImageView>
             <AnchorPane fx:id="slider" prefHeight="629.0" prefWidth="298.0" style="-fx-background-color: #0A1D8E; -fx-background-radius: 0px 30px 30px 0px;" AnchorPane.leftAnchor="0.0">
                <children>
                   <VBox layoutX="-4.0" layoutY="3.0" prefHeight="577.0" prefWidth="268.0" AnchorPane.topAnchor="3.0">
